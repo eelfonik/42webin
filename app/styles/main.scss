@@ -23,7 +23,7 @@ body {
 
 body {
   position: relative;
-  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-family: 'Neuzeit book', Helvetica, Arial, sans-serif;
   font-weight: 300;
   background-color: #fff;
   box-sizing: border-box;
@@ -40,7 +40,7 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #4285f4;
+  // background-color: $colorTeal300;
   overflow: hidden;
   z-index: 1;
 }
@@ -72,7 +72,7 @@ body.open {
   line-height: 60px;
   margin: 0 16px;
   padding: 0;
-  color: #fefefe;
+  // color: #fff;
   float: none;
   max-width: none;
   font-weight: 300;
@@ -153,8 +153,8 @@ ol {
   bottom: 0;
   width: 250px;
   height: 100%;
-  background-color: #3367D6;
-  color: #fefefe;
+  background-color: $colorTeal300;
+  color: #ddd;
   -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
   overflow-y: auto;
@@ -230,6 +230,16 @@ main {
   min-height: 100%;
 }
 
+a.contact {
+  text-decoration: none;
+  color:black;
+  // &:focus,
+  // &:active,
+  // &:visited {
+  //   color: black;
+  // }
+}
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   .app-bar {
@@ -248,7 +258,8 @@ main {
     max-width: 864px;
     padding: 0 16px;
     box-sizing: border-box;
-    background-color: #4285f4;
+    text-align: center;
+    // background-color: $colorTeal300;
   }
 
   .app-bar .logo {
@@ -287,7 +298,7 @@ main {
     overflow-y: auto;
   }
 
-  .navdrawer-container h4 {
+  .navdrawer-container {
     display: none;
   }
 
@@ -318,49 +329,61 @@ main {
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
+  font-family: "Neuzeit book";
   font-style: normal;
-  font-weight: 300;
-  src: url(/fonts/RobotoCondensed-Light.eot);
-  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(/fonts/RobotoCondensed-Light.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Light.woff) format('woff');
+  src:url(/fonts/NeuzeitSLTStd-Book.otf);
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
+  font-family: "Neuzeit bookheavy";
   font-style: normal;
-  font-weight: 400;
-  src: url(/fonts/RobotoCondensed-Regular.eot);
-  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Regular.woff) format('woff');
+  src:url(/fonts/NeuzeitSLTStd-BookHeavy.otf);
 }
 
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 700;
-  src: url(/fonts/RobotoCondensed-Bold.eot);
-  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Bold'), url(/fonts/RobotoCondensed-Bold.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Bold.woff) format('woff');
-}
+// @font-face {
+//   font-family: 'Roboto Condensed';
+//   font-style: normal;
+//   font-weight: 300;
+//   src: url(/fonts/RobotoCondensed-Light.eot);
+//   src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(/fonts/RobotoCondensed-Light.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Light.woff) format('woff');
+// }
 
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: italic;
-  font-weight: 300;
-  src: url(/fonts/RobotoCondensed-LightItalic.eot);
-  src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(/fonts/RobotoCondensed-LightItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-LightItalic.woff) format('woff');
-}
+// @font-face {
+//   font-family: 'Roboto Condensed';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(/fonts/RobotoCondensed-Regular.eot);
+//   src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Regular.woff) format('woff');
+// }
 
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: italic;
-  font-weight: 400;
-  src: url(/fonts/RobotoCondensed-Italic.eot);
-  src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(/fonts/RobotoCondensed-Italic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Italic.woff) format('woff');
-}
+// @font-face {
+//   font-family: 'Roboto Condensed';
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url(/fonts/RobotoCondensed-Bold.eot);
+//   src: local('Roboto Condensed Regular'), local('RobotoCondensed-Bold'), url(/fonts/RobotoCondensed-Bold.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Bold.woff) format('woff');
+// }
 
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: italic;
-  font-weight: 700;
-  src: url(/fonts/RobotoCondensed-BoldItalic.eot);
-  src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(/fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
-}
+// @font-face {
+//   font-family: 'Roboto Condensed';
+//   font-style: italic;
+//   font-weight: 300;
+//   src: url(/fonts/RobotoCondensed-LightItalic.eot);
+//   src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(/fonts/RobotoCondensed-LightItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-LightItalic.woff) format('woff');
+// }
+
+// @font-face {
+//   font-family: 'Roboto Condensed';
+//   font-style: italic;
+//   font-weight: 400;
+//   src: url(/fonts/RobotoCondensed-Italic.eot);
+//   src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(/fonts/RobotoCondensed-Italic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Italic.woff) format('woff');
+// }
+
+// @font-face {
+//   font-family: 'Roboto Condensed';
+//   font-style: italic;
+//   font-weight: 700;
+//   src: url(/fonts/RobotoCondensed-BoldItalic.eot);
+//   src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(/fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
+// }

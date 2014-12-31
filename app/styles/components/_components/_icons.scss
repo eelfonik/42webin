@@ -1,11 +1,16 @@
 @font-face {
   font-family: icons;
-  src: url(../images/icons/icons.eot);
-  src: url(../images/icons/icons.eot?#iefix) format('embedded-opentype'),
-    url(../images/icons/icons.woff2) format('woff2'),
-    url(../images/icons/icons.woff) format('woff'),
-    url(../images/icons/icons.ttf) format('truetype'),
-    url(../images/icons/icons.svg?#icons) format('svg');
+  // src: url(../images/icons/icons.eot);
+  // src: url(../images/icons/icons.eot?#iefix) format('embedded-opentype'),
+  //   url(../images/icons/icons.woff2) format('woff2'),
+  //   url(../images/icons/icons.woff) format('woff'),
+  //   url(../images/icons/icons.ttf) format('truetype'),
+  //   url(../images/icons/icons.svg?#icons) format('svg');
+  src: url(../images/icons/icomoon.eot);
+  src: url(../images/icons/icomoon.eot?#iefix) format('embedded-opentype'),
+    url(../images/icons/icomoon.woff) format('woff'),
+    url(../images/icons/icomoon.ttf) format('truetype'),
+    url(../images/icons/icomoon.svg?#icons) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -144,4 +149,44 @@ $icon-tick: '\e017';
 $icon-user-input: '\e018';
 .icon-user-input::before {
   content: '\e018';
+}
+
+//Icomoon
+$icon-chevron-down: '\e605';
+.icon-chevron-down::before {
+  content: '\e605';
+}
+
+$icon-chevron-left: '\e604';
+.icon-chevron-left::before {
+  content: '\e604';
+}
+
+$icon-chevron-right: '\e607';
+.icon-chevron-right::before {
+  content: '\e607';
+}
+
+$icon-chevron-up: '\e606';
+.icon-chevron-up::before {
+  content: '\e606';
+}
+
+$icon-close: '\e601';
+.icon-close::before {
+  content: '\e601';
+}
+
+$icon-minus: '\e602';
+.icon-minus::before {
+  content: '\e602';
+}
+$icon-plus: '\e603';
+.icon-plus::before {
+  content: '\e603';
+}
+
+$icon-menu: '\e600';
+.icon-menu::before {
+  content: '\e600';
 }
