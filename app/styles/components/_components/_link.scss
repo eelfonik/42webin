@@ -5,11 +5,17 @@
 **/
 
 a {
-  color: $colorBlue;
+  color: $colorTeal300;
+  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
+a:hover, a:visited:hover {
+  // text-decoration: none;
+  color: #23ED7F;
+}
+
+a:visited {
+	color:$colorTeal300;
 }
 
 .cta--primary {

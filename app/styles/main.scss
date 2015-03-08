@@ -6,12 +6,14 @@
  *
  */
 @import '_h5bp';
+@import 'components/_components/_iconp';
+@import '_basic';
 
 /*
  * Visual Style Guide styles
  * Remove if you prefer to use a CSS library, like Bootstrap
  */
-@import 'components/components';
+// @import 'components/components';
 
 html,
 body {
@@ -19,6 +21,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,ul,li {
+  list-style: none;
 }
 
 body {
@@ -40,7 +51,8 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  // background-color: $colorTeal300;
+  background-color: #23ED7F;
+  color:white;
   overflow: hidden;
   z-index: 1;
 }
@@ -56,6 +68,7 @@ body.open {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
+  // text-align: center;
 }
 
 .app-bar.open,
@@ -153,7 +166,7 @@ ol {
   bottom: 0;
   width: 250px;
   height: 100%;
-  background-color: $colorTeal300;
+  background-color: #23ED7F;
   color: #ddd;
   -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
@@ -230,15 +243,17 @@ main {
   min-height: 100%;
 }
 
-a.contact {
-  text-decoration: none;
-  color:black;
-  // &:focus,
-  // &:active,
-  // &:visited {
-  //   color: black;
-  // }
-}
+// .info {
+//   display: flex;
+//   flex-wrap:wrap;
+//   margin-top: 1em;
+// }
+
+// a.contact {
+//   flex:2;
+//   text-decoration: none;
+//   color:#23ED7F;
+// }
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
@@ -263,7 +278,7 @@ a.contact {
   }
 
   .app-bar .logo {
-    float: left;
+    // float: left;
     margin: 0;
     padding: 0;
     line-height: 130px;
@@ -326,6 +341,13 @@ a.contact {
   body {
     overflow-y: scroll;
   }
+
+//   a.contact {
+//   flex:4;
+//   text-decoration: none;
+//   color:#23ED7F;
+  
+// }
 }
 
 @font-face {
