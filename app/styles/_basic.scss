@@ -13,7 +13,7 @@
 	// height: 100px;
 	cursor: pointer;
 	position: absolute;
-	@for $i from 1 through 6 {
+	@for $i from 1 through 7 {
   	&:nth-child(#{$i})
   	 { top: 12% * $i; }
 	}
@@ -118,13 +118,13 @@
 	}
 	.num {
 		width:1em;
-	@for $i from 1 through 3 {
+	@for $i from 1 through 4 {
   	&:nth-child(#{$i})
   	 { left: 200px * $i; 
   	 	top:0.4em;
   	 }
   	&:nth-child(#{$i+3}) {
-  		left: 220px * $i; 
+  		left: 200px * $i; 
   		top:1.4em;
   	}
 	}

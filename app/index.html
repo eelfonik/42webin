@@ -10,7 +10,7 @@
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
+    <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -32,33 +32,41 @@
   <body>
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
-        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo"><a href="">42web.co</a></h1>
-        <section class="app-bar-actions">
-        <!-- Put App Bar Buttons Here -->
-        <!-- e.g <button><i class="icon icon-star"></i></button> -->
-        </section>
+        <!-- <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button> -->
+        <div class="logo"><a href="">mengxue&nbsp;jin</a></div>
+        <div class="pics"><img src="http://placehold.it/350x150" alt=""></div>
+         <section class="info">
+          <a href="" class="contact">twitter</a><a href="" class="contact">email</a><a href="" class="contact">github</a>
+        </div>
       </div>
     </header>
 
-    <nav class="navdrawer-container promote-layer">
-      <!-- <h4>Navigation</h4> -->
+    <!-- <nav class="navdrawer-container promote-layer">
+      
       <ul>
         <li><a href="#work">work</a></li>
-        <!-- <li><a href="#lab">lab</a></li> -->
         <li><a href="#hello">about</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
     <main>
       <section id="work">
-      <h2>work</h2>
       <ul class="list-link">
-        <li><a href="http://xing-chen.net" target="_blank">XingChen</a></li>
-        <li><a href="http://demo.la-cabane-perchee.com/" target="_blank">La cabane perchee</a></li>
-        <li><a href="http://criloi.com" target="_blank">criloi</a></li>
-        <li><a href="http://yingzicui.com" target="_blank">Yingzi.C</a></li>
-        <li><a href="http://blindaudience.com" target="_blank">Blind Audience</a></li>
+        <li><a href="http://exprimerie.ch">Exprimerie</a>
+        <div>WordPress one-page typography</div>
+        </li>
+        <li><a href="http://xing-chen.net" target="_blank">XingChen</a>
+        <div>gulp git responsive</div>
+        </li>
+        <li><a href="http://demo.la-cabane-perchee.com/" target="_blank">La cabane perchee</a>
+        <div>WordPress responsive multi-language php</div>
+        </li>
+        <li><a href="http://www.cristinaloi.com/" target="_blank">Criloi</a>
+        <div>collaboration brand</div>
+        </li>
+        <li><a href="http://yingzicui.com" target="_blank">Yingzi.C</a>
+        <div>web-design brand layout</div>
+        </li>
       </ul>
       </section>
 
@@ -67,20 +75,20 @@
       </section> -->
 
       <section id="hello">
-        <h2>about</h2>
         <div>A tool maniac, quick learner, problem solver. Build things with delight and devotion.</div>
         <div>Former communicator fascinated by new media, now a coder embraces design.</div>
-        <div class="info">
+        <!-- <div class="info">
           <a href="" class="contact"><i class="icon-twitter-outline large"></i></a>
           <a href="" class="contact"><i class="icon-send-mail-outline large"></i></a>
           <a href="" class="contact"><i class="icon-call-phone-outline large"></i></a>
           <a href="" class="contact"><i class="icon-github-outline large"></i></a>
-        </div>
+        </div> -->
       </section>
       
     </main>
-
+    
     <!-- build:js scripts/main.min.js -->
+    <script src="scripts/jquery-1.11.1.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
