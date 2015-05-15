@@ -1,0 +1,10 @@
+{
+  "name": "42web",
+  "description": "site for k",
+  "version": "0.0.1",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-rev-all": "^0.7.4"
+  }
+}

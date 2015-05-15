@@ -73,14 +73,15 @@ body.open {
   // -webkit-flex: 1;
   //     -ms-flex: 1;
   //         flex: 1;
-  // font-size: 2em;
+  font-size: 2.5vw;
+  letter-spacing: 7.2vw;
   margin: 0 auto;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 10px;
   // color: #fff;
   float: none;
   max-width: none;
-  width:100%;
+  width:90%;
 }
 
 .app-bar .logo a {
@@ -90,10 +91,14 @@ body.open {
 }
 
 .app-bar .info {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  margin-left: 5%;
+  font-size: 2.5vw;
+  letter-spacing: 3.65vw;
   // margin-left:5%;
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   // display: -webkit-flex;
   // display: -ms-flexbox;
   // display: flex;
@@ -173,14 +178,9 @@ body.open {
   backface-visibility: hidden;
   position: fixed;
   z-index: 9;
+  background-color: white;
 }
 
-.base,
-p,
-ul,
-ol {
-  font-size: 16px;
-}
 
 // .navdrawer-container {
 //   z-index: 1;
@@ -260,9 +260,11 @@ main {
 // }
 
 main {
+  font-size: 3.5vw;
   margin: 0 auto;
   /* Height of the header */
   padding: 0px 16px 16px 16px;
+  padding-top: 100vh;
   min-height: 100%;
 }
 
@@ -344,7 +346,6 @@ main {
   main {
     // max-width: 864px;
     padding-top: 100vh;
-    min-height: initial;
   }
 
   body {

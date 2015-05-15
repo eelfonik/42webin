@@ -1,0 +1,27 @@
+/**
+*
+* Link
+*
+**/
+
+a {
+  color: $colorTeal300;
+  text-decoration: none;
+}
+
+a:hover, a:visited:hover {
+  // text-decoration: none;
+  color: #23ED7F;
+}
+
+a:visited {
+	color:$colorTeal300;
+}
+
+.cta--primary {
+  @include style-cta($colorBlue, $icon-chevron-right);
+}
+
+.cta--secondary {
+  @include style-cta($colorBlue);
+}
