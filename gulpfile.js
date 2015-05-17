@@ -4,7 +4,7 @@ var del = require('del');
 
 gulp.task('buildset', function () {
     gulp.src('app/**')
-        .pipe(revall({ ignore: [/^\/favicon.ico$/g, '.html', '.jpg','.png', '.svg','.scss','.map'] }))
+        .pipe(revall({ ignore: [/^\/favicon.ico$/g, '.html', '.jpg','.png', '.svg','.scss','.map','.txt','.codekit'] }))
         .pipe(gulp.dest('dist'))
 });
 

@@ -1,33 +1,9 @@
 
 (function () {
   'use strict';
+  
 
 
-// $(window).on('scroll', function () {
-//     var scrollTop = $(window).scrollTop();
-//     if (scrollTop > 0) {
-//         $('.app-bar').velocity({height: "80vh"},200);
-//     }
-//     else {
-//          $('.app-bar').velocity({height: "100vh"},200);   
-//     }
-// });
-
-(function () {
-    var previousScroll = 0;
-
-    $(window).scroll(function(){
-       var currentScroll = $(this).scrollTop();
-       if (currentScroll > previousScroll){
-            console.log('up');
-           $('.app-bar').velocity({height: "80vh"},400);
-       } else {
-            console.log('down');
-          $('.app-bar').stop().velocity({height: "100vh"},400);
-       }
-       previousScroll = currentScroll;
-    });
-}()); //run this anonymous function immediately
 
   // var querySelector = document.querySelector.bind(document);
 
