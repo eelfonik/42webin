@@ -1,7 +1,17 @@
 
 (function () {
   'use strict';
-  
+  $(".toggle").click(function(){
+    var $folds = $(".fold");
+    $folds.addClass("unfold");
+    
+  });
+
+  $(window).on("load resize", function(){
+    var wh = $(this).height();
+    $(".fold").css("height", wh/2+"px");
+  });
+
 
 
 
