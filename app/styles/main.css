@@ -2764,13 +2764,20 @@ Copyright (c) 2015 Daniel Eden
  * Visual Style Guide styles
  * Remove if you prefer to use a CSS library, like Bootstrap
  */
+@font-face {
+  font-family: "CircularStd-Book";
+  src: local("CircularStd-Book.otf"), url("/fonts/CircularStd-Book.otf");
+  font-weight: 400;
+  font-style: regular;
+  font-variant: normal;
+  font-stretch: normal; }
 html,
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; }
+  font-family: 'CircularStd-Book', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box; }
 
 a {
   text-decoration: none; }
@@ -2778,92 +2785,100 @@ a {
 ol, ul, li {
   list-style: none; }
 
-body {
-  font-family: 'CircularStd-Book', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  box-sizing: border-box; }
+header {
+  position: fixed;
+  z-index: 10;
+  -webkit-transform: translateY(-70vh);
+      -ms-transform: translateY(-70vh);
+          transform: translateY(-70vh);
+  width: 100%;
+  background-color: white;
+  -webkit-transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out; }
+  header #hello {
+    color: white;
+    height: 70vh;
+    font-size: 2em; }
 
-.app-bar {
+header.clicked {
+  background-color: black;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out; }
+  header.clicked .logo {
+    color: white;
+    -webkit-transition: color 400ms ease-in-out;
+    transition: color 400ms ease-in-out; }
+
+header.down {
+  -webkit-transform: translateY(-100vh);
+      -ms-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out; }
+
+.fold {
   font-family: 'NotCourierSansBold', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   display: block;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s; }
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  box-sizing: border-box;
+  z-index: 10; }
 
-.app-bar.hide {
+.fold.hide {
   -webkit-transform: translateX(100vw);
       -ms-transform: translateX(100vw);
           transform: translateX(100vw);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s; }
-
-.app-bar-container {
-  margin: 0 auto;
+          transition-delay: 0.5s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-perspective: 800px;
           perspective: 800px; }
 
-.app-bar .logo {
+.logo {
   font-size: 2.5vw;
   letter-spacing: 7.2vw;
   margin: 0 auto;
   padding: 0;
   padding-top: 10px;
-  float: none;
-  max-width: none;
-  width: 100%;
-  height: 50vh; }
-  .app-bar .logo .wrapper {
+  width: 100%; }
+  .logo .wrapper {
     width: 90%;
     margin: 0 auto; }
 
-.app-bar .logo a {
+.logo a {
   text-decoration: none;
   color: inherit;
-  font-weight: normal; }
+  font-weight: normal;
+  width: 100%; }
 
-.app-bar .info {
+.info {
   width: 100%;
-  height: 50vh;
+  background-color: white;
   margin: 0 auto;
   font-size: 2.5vw;
   letter-spacing: 3.65vw;
-  position: relative; }
-  .app-bar .info .wrapper {
-    position: absolute;
-    width: 90%;
-    bottom: 20px;
-    left: 5%; }
-
-.fold {
-  box-sizing: border-box;
-  background-color: white; }
-
-#toggle {
-  cursor: pointer;
-  width: 5em;
-  height: 1.5em;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: fixed;
   bottom: 0;
-  z-index: 9;
-  text-align: center; }
+  left: 0;
+  padding: 0; }
+  .info .wrapper {
+    width: 90%;
+    margin: 0 auto; }
+    .info .wrapper a:hover {
+      color: #ddd; }
 
 .promote-layer {
   /*
@@ -2878,31 +2893,107 @@ body {
   backface-visibility: hidden; }
 
 main {
+  position: relative;
   font-size: 3.5vw;
   margin: 0 auto;
+  padding-top: 54px;
+  padding-bottom: 44px;
   /* Height of the header */
-  width: 100%;
-  background-color: #56ac53; }
+  width: 100%; }
+  main:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #eee;
+    z-index: -1; }
 
-#svg {
-  position: relative;
+#work {
   width: 100%;
-  height: 100%;
-  background-color: #000;
-  z-index: -1; }
+  margin: 0 auto; }
 
-#down {
-  text-align: center;
-  position: absolute; }
+.works {
+  width: 90%;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.projet.blured {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8); }
+
+.projet,
+.projet-name {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center; }
+
+.projet {
+  position: relative; }
+  .projet img {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 10% 0 0; }
+  .projet:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background-color: black;
+    opacity: 1; }
+
+.clicked .projet:before {
+  opacity: 0; }
+
+.projet-note {
+  margin-top: 20px;
+  font-size: 0.5em; }
+
+.projet-name a {
+  position: relative; }
+  .projet-name a:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0.75em;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out; }
+
+.projet-name a:hover:after {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out; }
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   body {
     overflow-y: scroll; } }
-@font-face {
-  font-family: "CircularStd-Book";
-  src: local("CircularStd-Book.otf"), url("/fonts/CircularStd-Book.otf");
-  font-weight: 400;
-  font-style: regular;
-  font-variant: normal;
-  font-stretch: normal; }

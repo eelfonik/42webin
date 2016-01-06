@@ -22,13 +22,57 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/images\/1.png": {
+	"\/images\/cabane.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.17516e+06,
+		"inputAbbreviatedPath": "\/images\/cabane.png",
+		"outputAbbreviatedPath": "\/images\/cabane.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/chen.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 753243,
-		"inputAbbreviatedPath": "\/images\/1.png",
-		"outputAbbreviatedPath": "\/images\/1.png",
+		"inputAbbreviatedPath": "\/images\/chen.png",
+		"outputAbbreviatedPath": "\/images\/chen.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/chenx.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 671486,
+		"inputAbbreviatedPath": "\/images\/chenx.png",
+		"outputAbbreviatedPath": "\/images\/chenx.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/criloi.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 425886,
+		"inputAbbreviatedPath": "\/images\/criloi.png",
+		"outputAbbreviatedPath": "\/images\/criloi.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/exprimerie.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54258,
+		"inputAbbreviatedPath": "\/images\/exprimerie.png",
+		"outputAbbreviatedPath": "\/images\/exprimerie.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -66,6 +110,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/sysmo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 693910,
+		"inputAbbreviatedPath": "\/images\/sysmo.png",
+		"outputAbbreviatedPath": "\/images\/sysmo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/touch\/chrome-touch-icon-192x192.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -95,6 +150,17 @@
 		"initialSize": 1093,
 		"inputAbbreviatedPath": "\/images\/touch\/ms-touch-icon-144x144-precomposed.png",
 		"outputAbbreviatedPath": "\/images\/touch\/ms-touch-icon-144x144-precomposed.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/yz.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 588208,
+		"inputAbbreviatedPath": "\/images\/yz.png",
+		"outputAbbreviatedPath": "\/images\/yz.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
