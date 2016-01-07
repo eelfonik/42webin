@@ -1,10 +1,4 @@
-/*
- * Web Starter Kit
- *
- * Multi-screen layout styles for your page. Brought to you by the
- * Web Starter Kit team.
- *
- */
+
 @import 'components/_normalize';
 @import '_h5bp';
 @import 'components/_components/_iconp';
@@ -12,10 +6,6 @@
 
 // @import '_basic';
 
-/*
- * Visual Style Guide styles
- * Remove if you prefer to use a CSS library, like Bootstrap
- */
 // @import 'components/components';
 @font-face {
   font-family: "CircularStd-Book";
@@ -44,29 +34,24 @@ ol,ul,li {
   list-style: none;
 }
 
-body {
-  // position: relative;
-  
-  // min-height: 100%;
+img {
+  max-width: 100%;
 }
 
-// body.open {
-//   overflow: hidden;
-// }
 header {
   position: fixed;
   z-index: 10;
-  transform: translateY(-70vh);
   width: 100%;
   background-color: white;
+  transform: translateY(-200px);
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
-  // animation-duration: 100ms;
   #hello {
     color:white;
-    height: 70vh;
-    font-size: 2em;
+    height: 200px;
+    font-size: 1em;
   }
 }
+
 header.clicked {
   background-color: black;
   transform: translateY(0);
@@ -84,51 +69,15 @@ header.down {
 
 .fold {
   font-family: 'NotCourierSansBold', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;  
   display: block;
-  // transition: all 0.5s ease-in-out;
-  // transform: translateX(0);
-  // transition-delay: 0.5s;
   animation-duration: 400ms;
   box-sizing: border-box;
   z-index: 10;
 }
 
-.fold.hide {
-  transform: translateX(100vw);
-  transition: all 0.5s ease-in-out;
-  transition-delay: 0.5s;
-  transform-style: preserve-3d;
-  perspective: 800px;
-}
-
-// .app-bar.open,
-// .app-bar.open ~ main {
-//   -webkit-transform: translate(250px, 0);
-//           transform: translate(250px, 0);
-// }
-
 .logo {
-  // -webkit-flex: 1;
-  //     -ms-flex: 1;
-  //         flex: 1;
-  font-size: 2.5vw;
-  letter-spacing: 7.2vw;
-  margin: 0 auto;
-  padding: 0;
-  padding-top: 10px;
-  // color: #fff;
-  
-  width:100%;
-  // position: fixed;
-  // top:0;
-  // left:0;
-  // height: 50vh;
-  // perspective-origin:50% 0%;
-  .wrapper {
-    width: 90%;
-    margin: 0 auto;
-  }
+  font-size: 2em;
+  letter-spacing: 0.5em;
 }
 
 .logo a {
@@ -138,11 +87,50 @@ header.down {
   width: 100%;
 }
 
-.logo.about {
-
+main {
+  width: 90%;
+  margin: 0px auto;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  font-size: 2em;
 }
 
 .info {
+  display: none;
+}
+
+
+/** Larger Screens - desktops and tablets **/
+@media all and (min-width: 990px) {
+
+header {
+  transform: translateY(-70vh);
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
+  #hello {
+    font-size: 2em;
+    height: 70vh;
+  }
+}
+.fold {
+  text-transform: uppercase;  
+}
+
+.logo {
+  font-size: 2.5vw;
+  letter-spacing: 7.2vw;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 10px;
+  
+  width:100%;
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.info {
+  display: block;
   width: 100%;
   background-color: white;
   // height: 50vh;
@@ -153,179 +141,23 @@ header.down {
   bottom: 0;
   left:0;
   padding: 0;
-  // perspective-origin:50% 100%;
   .wrapper {
-    // position: absolute;
     width: 90%;
     margin: 0 auto;
-    // bottom: 20px;
-    // left: 5%;
     a:hover {
         color:#ddd;
     }
   }
 }
 
-
-// #toggle {
-//   cursor: pointer;
-//   width: 5em;
-//   height:1.5em;
-//   position: absolute;
-//   margin:auto;
-//   top:0;
-//   left:0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 9;
-//   text-align: center;
-// }
-
-// .logo.unfold{
-//   transform: rotateX(90deg) translateY(-15vh);
-//   transform-origin: 50% top 0;
-// }
-
-// .info.unfold{
-//   transform: rotateX(-90deg) translateY(15vh);
-//   transform-origin: 50% bottom 0;
-// }
-
-// .app-bar-actions {
-//   display: -webkit-flex;
-//   display: -ms-flexbox;
-//   display: flex;
-//   -webkit-flex-direction: row;
-//       -ms-flex-direction: row;
-//           flex-direction: row;
-//   z-index: 2;
-// }
-
-// .app-bar button {
-//   width: 60px;
-//   height: 60px;
-//   background-image: none;
-//   background-color: transparent;
-//   border: none;
-//   padding: 0;
-//   display: inline-block;
-//   -webkit-transition: background-color 0.2s ease-out;
-//           transition: background-color 0.2s ease-out;
-//   -webkit-tap-highlight-color: transparent;
-// }
-
-// .app-bar button img {
-//   height: 24px;
-//   width: 24px;
-// }
-
-// .app-bar button:hover {
-//   background-color: rgba(255, 255, 255, 0.1);
-// }
-
-// .app-bar button:focus {
-//   background-color: rgba(255, 255, 255, 0.2);
-//   outline: 0;
-// }
-
-// .app-bar button:active {
-//   background-color: rgba(255, 255, 255, 0.4);
-// }
-
-.promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
-
-  Replace with will-change when available
-
-  #perfmatters
-  */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-
-// .navdrawer-container {
-//   z-index: 1;
-//   position: fixed;
-//   top: 0;
-//   bottom: 0;
-//   width: 250px;
-//   height: 100%;
-//   background-color: #23ED7F;
-//   color: #ddd;
-//   -webkit-transform: translate(-250px, 0);
-//           transform: translate(-250px, 0);
-//   overflow-y: auto;
-// }
-
-// .navdrawer-container.open {
-//   -webkit-transform: translate(0, 0);
-//           transform: translate(0, 0);
-// }
-
-
-// .navdrawer-container h4,
-// .navdrawer-container ul li a {
-//   height: 60px;
-//   padding: 17px 20px;
-//   line-height: 1.4;
-// }
-
-// .navdrawer-container h4 {
-//   background-color: white;
-//   color: #3367D6;
-// }
-
-// .navdrawer-container ul {
-//   padding: 0;
-//   margin: 0;
-//   list-style-type: none;
-// }
-
-// .navdrawer-container ul li a {
-//   display: block;
-//   text-decoration: none;
-//   color: white;
-//   -webkit-transition: background-color 0.2s ease-out;
-//           transition: background-color 0.2s ease-out;
-//   white-space: nowrap;
-// }
-
-// .navdrawer-container ul li {
-//   border-bottom-style: solid;
-//   border-width: 1px;
-//   border-color: white;
-//   padding: 0;
-// }
-
-// .navdrawer-container ul li::before {
-//   content: none;
-// }
-
-// .navdrawer-container ul li a:hover {
-//   background-color: rgba(255, 255, 255, 0.2);
-// }
-
-// .navdrawer-container ul li a:focus {
-//   background-color: rgba(255, 255, 255, 0.3);
-//   outline: 0;
-// }
-
-// .navdrawer-container ul li a:active {
-//   background-color: rgba(255, 255, 255, 0.4);
-// }
-
 main {
   position: relative;
   font-size: 3.5vw;
   margin: 0 auto;
+  //height of header
   padding-top: 54px;
+  //height of footer
   padding-bottom: 44px;
-  /* Height of the header */
-  // padding: 0px 16px 16px 16px;
-  // height: 100%;
   width: 100%;
   &:after {
     content: "";
@@ -342,7 +174,6 @@ main {
 #work {
   width: 100%;
   margin:0 auto;
-  // background-color: #ddd;
 }
 
 .works {
@@ -351,11 +182,6 @@ main {
   display: flex;
   justify-content:center;
   align-items:center;
-}
-
-.projet.blured {
-  filter:blur(2px);
-  transform: scale(0.8);
 }
 
 .projet,
@@ -371,6 +197,8 @@ main {
     width: 90%;
     height: auto;
     margin:0 10% 0 0;
+    opacity: 0;
+    // transition: opacity 600ms ease-in-out;
     }
   &:before {
       content:"";
@@ -382,57 +210,44 @@ main {
       height: 100%;
       background-color: black;
       opacity: 1;
-      // z-index: 9;
-
+      // transition: opacity 300ms linear;
       }
   
 }
 
 .clicked .projet:before {
   opacity: 0;
+  // transition: opacity 300ms linear;
+}
+.clicked .projet img {
+  opacity: 1;
+  // transition: opacity 600ms ease-in-out;
 }
 .projet-note {
   margin-top: 20px;
   font-size: 0.5em;
 }
 
-.projet-name {
-
-}
-
 .projet-name a{
-    position: relative;
-    &:after{
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: black;
-      position: absolute;
-      left:0;
-      top:0.75em;
-      transform: scaleX(0);
-      transition: all 400ms ease-in-out;
-    }
+    // position: relative;
+    // &:after{
+    //   content: "";
+    //   width: 100%;
+    //   height: 1px;
+    //   background-color: black;
+    //   position: absolute;
+    //   left:0;
+    //   top:0.75em;
+    //   transform: scaleX(0);
+    //   transition: all 400ms ease-in-out;
+    // }
 }
 
-.projet-name a:hover {
-    &:after {
-      transform: scaleX(1);
-      transition: all 400ms ease-in-out;
-    }
-}
-
-
-/** Larger Screens - desktops and tablets **/
-@media all and (min-width: 990px) {
-
-  main {
-    // max-width: 864px;
-    // height: 100vh;
-  }
-
-  body {
-    overflow-y: scroll;
-  }
+// .projet-name a:hover {
+//     &:after {
+//       transform: scaleX(1);
+//       transition: all 400ms ease-in-out;
+//     }
+// }
 
 }

@@ -57,43 +57,13 @@
     // }
   });
 
-  $(".works").click(function(){
-      var $this = $(this);
-      var projet = $this.find(".projet");
-      $this.addClass("clicked");
-      $this.siblings().removeClass("clicked");
-      var elOffset = $this.offset().top;
-      var elHeight = $this.height();
-      var windowHeight = $(window).height();
-      var offset;
-
-      if (elHeight < windowHeight) {
-        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
-      }
-      else {
-        offset = elOffset;
-      }
-
-      $('html, body').animate({
-            scrollTop: offset
-        }, 500);
-
-      if (projet.hasClass("blured")) {
-          projet.removeClass("blured");
-      }
-      $this.siblings().find(".projet").addClass("blured");
-      projet.toggleClass("animated zoomIn");
-
-
-  });
-
-  // $(".projet-name").click(function(e){
-  //     e.preventDefault();
-  //     var $this= $(this);
-  //     var $container = $this.parent(".works");
-  //     var $projet = $this.siblings(".projet");
-  //     var elOffset = $container.offset().top;
-  //     var elHeight = $container.height();
+  // $(".works").click(function(){
+  //     var $this = $(this);
+  //     var projet = $this.find(".projet");
+  //     $this.addClass("clicked");
+  //     $this.siblings().removeClass("clicked");
+  //     var elOffset = $this.offset().top;
+  //     var elHeight = $this.height();
   //     var windowHeight = $(window).height();
   //     var offset;
 
@@ -107,12 +77,36 @@
   //     $('html, body').animate({
   //           scrollTop: offset
   //       }, 500);
-  //     if ($projet.hasClass("blured")) {
-  //         $projet.removeClass("blured");
-  //     }
-  //     $container.siblings().find(".projet").addClass("blured");
-  //     $projet.toggleClass("animated zoomIn");
+
+  //     $this.siblings().find(".projet").addClass("blured");
+  //     // projet.toggleClass("animated zoomIn");
+
+
   // });
+
+  $(".projet-name").click(function(e){
+      e.preventDefault();
+      var $this= $(this);
+      var $container = $this.parent(".works");
+      $container.addClass("clicked");
+      $container.siblings().removeClass("clicked");
+      var $projet = $this.siblings(".projet");
+      var elOffset = $container.offset().top;
+      var elHeight = $container.height();
+      var windowHeight = $(window).height();
+      var offset;
+
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+
+      $('html, body').animate({
+            scrollTop: offset
+        }, 500);
+  });
     
   });
 
