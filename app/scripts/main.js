@@ -2,68 +2,56 @@
 (function () {
   'use strict';
 
-    // $(this).html(mainTl.reversed() ? "works":"info");
-
-    // mainTl.reversed() ? mainTl.play(): mainTl.reverse();
-    // $(this).innerHTML = mainTl.reversed() ? "info":"works";
-    // mainTl.play();
-    // $(".app-bar").toggleClass("hide");
-
 
   $(window).on("load resize", function(){
-    
-
-      var mainTl = new TimelineMax({
-      paused:true,
-      reversed:true
-    });
-    // mainTl.to(".logo a",0.5, {text:"about"})
-    mainTl.to(".logo", 0.1, {y:"-15%", rotationX:90, transformOrigin:"50% top 0"},0)
-          .to(".info", 0.1, {y:"15%", rotationX:-90, transformOrigin:"50% bottom 0"},0);
-          // .to(".app-bar",0.0001, {x:"100%"})
 
 
-    function centerEl(el) {
-        var elOffset = el.offset().top;
-        var elHeight = el.height();
+    function centerEl(el, container) {
+        var elHeight = el.outerHeight(true);
+        var aboveHeight = 0;
+        el.prevAll().each(function(){
+          aboveHeight += $(this).outerHeight(true);          
+        });
         var windowHeight = $(window).height();
         var offset;
 
         if (elHeight < windowHeight) {
-          offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+            offset = aboveHeight - (windowHeight/2-elHeight/2);
         }
         else {
-          offset = elOffset;
+          offset = aboveHeight;
         }
-
-        $('html, body').animate({
+        
+        container.animate({
               scrollTop: offset
           }, 500);
     }
 
+    // function isScrolledIntoView(el, view){
+    //       var centerY = Math.max(0,((view.outerHeight(true)- el.outerHeight(true)) / 2) + view.scrollTop());
+
+    //       var elementTop = el.offset().top;
+    //       var elementBottom = elementTop + el.outerHeight(true);
+
+    //       return elementTop <= centerY && elementBottom >= centerY;
+    //   }
+
     function isScrolledIntoView(elem){
-          var centerY = Math.max(0,(($(window).height()-$(elem).outerHeight()) / 2) + $(window).scrollTop());
-
-          var elementTop = $(elem).offset().top;
-          var elementBottom = elementTop + $(elem).height();
-
-          return elementTop <= centerY && elementBottom >= centerY;
+          // var centerY = Math.max(0,(($(window).height()-$(elem).outerHeight(true)) / 2 +1));
+          // var elementTop = $(elem).offset().top;
+          // var elementBottom = elementTop + $(elem).height();
+          // return elementTop < centerY && elementBottom > centerY;
+          var centerY = $(window).height()/3;
+          var elementTop = $(elem).offset().top + 40;
+          var elementBottom = elementTop + $(elem).outerHeight(true);
+          return elementTop < centerY && elementBottom > centerY;
       }
 
 
-  
-      var position = $(window).scrollTop();
-
-      $(window).scroll(function() {
-        $(".projet").each(function() {
-            if(isScrolledIntoView($(this))) {
-              if(!$(this).hasClass("clicked")) {
-                  $(this).addClass("clicked");
-              }
-              $(this).parent(".works").siblings().find(".projet").removeClass("clicked");
-            }
-        });
-        var scroll = $(window).scrollTop();
+    function scrollDirection(container) {
+      var position = container.scrollTop();
+      container.scroll(function(){
+        var scroll = container.scrollTop();
         if (scroll > position) {
           // scrolling downwards
           $("header").addClass("down");
@@ -77,60 +65,62 @@
         }
         position = scroll;
       });
+    }
+
+    scrollDirection($(".works-pic"));
+    scrollDirection($(".works-name"));
+
+      $(".works-pic").scroll(function() {
+        $(".work").each(function() {
+            var $this = $(this);
+            if(isScrolledIntoView($this)) {
+              if(!$this.hasClass("clicked")) {
+                  $this.addClass("clicked");
+                  var pointer = "#"+$this.attr("id").split('-')[0];
+                  console.log(pointer);
+                  centerEl($(pointer), $(".works-name"));
+              }
+              $this.siblings().removeClass("clicked");
+            }
+        });
+        // if ($(".work:last").offset().top < $(window).height()/2) {
+        //   $(".work:last").addClass("clicked");
+        //   $(".work:last").siblings().removeClass("clicked");
+        // }
+        // $(".work:not(:last)").each(function() {
+        //     if(isScrolledIntoView($(this))) {
+        //       if(!$(this).hasClass("clicked")) {
+        //           $(this).addClass("clicked");
+        //       }
+        //       $(this).siblings().removeClass("clicked");
+        //     }
+        // });
+      });
 
       
 
   $(".logo a").click(function(e){
     e.preventDefault();
     $("header").toggleClass("clicked");
-    $("#hello").toggleClass("fadeInDown");
-    // if (mainTl.reversed()) {
-    //   mainTl.play();
-    // }
-    // else {
-    //   if(!mainTl.reversed() && mainTl.progress() === 1) {
-    //     mainTl.reverse();
-    //   }
-    // }
+    // $("#hello").toggleClass("fadeInDown");
   });
 
-  // $(".works").click(function(){
-  //     var $this = $(this);
-  //     var projet = $this.find(".projet");
-  //     $this.addClass("clicked");
-  //     $this.siblings().removeClass("clicked");
-  //     var elOffset = $this.offset().top;
-  //     var elHeight = $this.height();
-  //     var windowHeight = $(window).height();
-  //     var offset;
-
-  //     if (elHeight < windowHeight) {
-  //       offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
-  //     }
-  //     else {
-  //       offset = elOffset;
-  //     }
-
-  //     $('html, body').animate({
-  //           scrollTop: offset
-  //       }, 500);
-
-  //     $this.siblings().find(".projet").addClass("blured");
-  //     // projet.toggleClass("animated zoomIn");
-
-
-  // });
-
-  $(".projet-name").click(function(e){
-      e.preventDefault();
+  $(".work-name").click(function(){
       var $this= $(this);
-      var $container = $this.parent(".works");
-      var $projet = $this.siblings(".projet");
-      if(!$projet.hasClass("clicked")) {
-          $projet.addClass("clicked");
-      }
-      $container.siblings().find(".projet").removeClass("clicked");
-      centerEl($projet);
+      var pointer = "#"+$this.attr("id")+"-pic";
+      var $pic = $(pointer);
+      centerEl($pic, $(".works-pic"));
+      // $this.addClass('expanded');
+      // $this.siblings().removeClass('expanded');
+      // centerEl($this, $(".works-name"));
+      
+      // var $container = $this.parent(".works");
+      // var $projet = $this.siblings(".projet");
+      // if(!$projet.hasClass("clicked")) {
+      //     $projet.addClass("clicked");
+      // }
+      // $container.siblings().find(".projet").removeClass("clicked");
+      // centerEl($projet);
   });
     
   });

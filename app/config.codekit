@@ -22,15 +22,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/main.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/main.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/images\/cabane.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -231,6 +222,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/main.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/main.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/main1.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/main1.js",
+		"outputAbbreviatedPath": "\/scripts\/main1.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/main1.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/main1.min.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/main1.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -994,9 +1007,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/styles\/main.scss",
-		"outputAbbreviatedPath": "\/css\/main.css",
+		"outputAbbreviatedPath": "\/styles\/main.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
@@ -1033,6 +1046,14 @@
 "lastSavedByUser": "kino",
 "manualImportLinks": {
 	"\/scripts\/main.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/scripts\/jquery-1.11.1.min.js",
+			"position": 0,
+			"type": 0
+			}
+		],
+	"\/scripts\/main1.js": [
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/scripts\/jquery-1.11.1.min.js",

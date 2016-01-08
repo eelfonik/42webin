@@ -103,6 +103,12 @@ main {
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
 
+html, body {
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+}
+
 header {
   transform: translateY(-70vh);
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
@@ -155,42 +161,65 @@ main {
   font-size: 3.5vw;
   margin: 0 auto;
   //height of header
-  padding-top: 54px;
+  // padding-top: 54px;
   //height of footer
-  padding-bottom: 44px;
+  // padding-bottom: 44px;
   width: 100%;
-  &:after {
-    content: "";
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: #eee;
-    z-index: -1;
-  }
+  height:100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  // background-color: #eee;
 }
 
-#work {
-  width: 100%;
-  margin:0 auto;
-}
-
-.works {
-  width: 90%;
-  margin: 40px auto;
+#projets {
   display: flex;
   justify-content:center;
   align-items:center;
-}
-
-.projet,
-.projet-name {
-  flex:1;
   text-align: center;
+  height: 100%;
+  // overflow: hidden;
 }
 
-.projet {
+.works-pic,
+.works-name {
+  flex:1;
+  height: 100%;
+  overflow: scroll;
+}
+
+.works-pic {
+  background-color: #eee;
+  padding-left: 5%;
+  // padding-top: 54px;
+  // padding-bottom: 44px;
+}
+.work {
+  padding:40px 0;
+}
+.work-pic {
+    width: 90%;
+    height: auto;
+    padding:40px 10% 20px 0;
+}
+
+.work-name {
+  cursor: pointer;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &.expanded {
+    height: 100%;
+    vertical-align: center;
+  }
+  &:first-child {
+      padding-top: 200px;
+  }
+  &:last-child {
+    padding-bottom: 50vh;
+  }
+}
+
+
+.work {
   position: relative;
   img {
     display: block;
@@ -204,10 +233,10 @@ main {
       content:"";
       display: block;
       position: absolute;
-      top:0;
+      top:40px;
       left:0;
       width: 90%;
-      height: 100%;
+      height: calc(100% - 120px);
       background-color: black;
       opacity: 1;
       // transition: opacity 300ms linear;
@@ -215,16 +244,16 @@ main {
   
 }
 
-.clicked.projet:before,
-.animated.projet:before {
+.clicked.work:before,
+.animated.work:before {
   opacity: 0;
   // transition: opacity 300ms linear;
 }
 
-.clicked.projet img,
-.animated.projet img {
+.clicked.work img,
+.animated.work img {
   opacity: 1;
-  // transition: opacity 600ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
 }
 
 .projet-note {
@@ -232,26 +261,5 @@ main {
   font-size: 0.5em;
 }
 
-.projet-name a{
-    // position: relative;
-    // &:after{
-    //   content: "";
-    //   width: 100%;
-    //   height: 1px;
-    //   background-color: black;
-    //   position: absolute;
-    //   left:0;
-    //   top:0.75em;
-    //   transform: scaleX(0);
-    //   transition: all 400ms ease-in-out;
-    // }
-}
-
-// .projet-name a:hover {
-//     &:after {
-//       transform: scaleX(1);
-//       transition: all 400ms ease-in-out;
-//     }
-// }
 
 }
