@@ -2960,27 +2960,7 @@ main {
       width: 90%;
       height: auto;
       margin: 0 10% 0 0;
-      opacity: 0; }
-    .work:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 40px;
-      left: 0;
-      width: 90%;
-      height: calc(100% - 120px);
-      background-color: black;
       opacity: 1; }
-
-  .clicked.work:before,
-  .animated.work:before {
-    opacity: 0; }
-
-  .clicked.work img,
-  .animated.work img {
-    opacity: 1;
-    -webkit-transition: opacity 600ms ease-in-out;
-    transition: opacity 600ms ease-in-out; }
 
   .projet-note {
     margin-top: 20px;

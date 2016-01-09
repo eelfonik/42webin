@@ -54,7 +54,7 @@
         var scroll = container.scrollTop();
         if (scroll > position) {
           // scrolling downwards
-          $("header").addClass("down");
+          $("header").addClass("down").removeClass("clicked");
           $(".logo").removeClass("fadeInDown");
           $(".info").removeClass("fadeInUp").addClass("fadeOutDown");
         } else {
@@ -68,7 +68,7 @@
     }
 
     scrollDirection($(".works-pic"));
-    scrollDirection($(".works-name"));
+    // scrollDirection($(".works-name"));
 
       $(".works-pic").scroll(function() {
         $(".work").each(function() {
@@ -76,25 +76,13 @@
             if(isScrolledIntoView($this)) {
               if(!$this.hasClass("clicked")) {
                   $this.addClass("clicked");
-                  var pointer = "#"+$this.attr("id").split('-')[0];
-                  console.log(pointer);
-                  centerEl($(pointer), $(".works-name"));
+                  // var pointer = "#"+$this.attr("id").split('-')[0];
+                  // console.log(pointer);
+                  // centerEl($(pointer), $(".works-name"));
               }
               $this.siblings().removeClass("clicked");
             }
         });
-        // if ($(".work:last").offset().top < $(window).height()/2) {
-        //   $(".work:last").addClass("clicked");
-        //   $(".work:last").siblings().removeClass("clicked");
-        // }
-        // $(".work:not(:last)").each(function() {
-        //     if(isScrolledIntoView($(this))) {
-        //       if(!$(this).hasClass("clicked")) {
-        //           $(this).addClass("clicked");
-        //       }
-        //       $(this).siblings().removeClass("clicked");
-        //     }
-        // });
       });
 
       
@@ -112,7 +100,7 @@
       centerEl($pic, $(".works-pic"));
       // $this.addClass('expanded');
       // $this.siblings().removeClass('expanded');
-      // centerEl($this, $(".works-name"));
+      centerEl($this, $(".works-name"));
       
       // var $container = $this.parent(".works");
       // var $projet = $this.siblings(".projet");
