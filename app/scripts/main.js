@@ -128,6 +128,17 @@
     // $("header").toggleClass("clicked");
   });
 
+  var colorThief = new ColorThief();
+
+  function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+  }
+
+  function rgbToHex(r, g, b) {
+      return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+  }
+
   $(".work-name").click(function(){
       var $projets = $("#projets");
       var $this= $(this);
@@ -135,11 +146,27 @@
       var $pic = $(pointer);
       centerEl($pic, $(".works-pic"));
       centerEl($this, $(".works-name"));
-      $this.addClass('showSingle');
 
-      setTimeout(function () { 
-          $this.removeClass('showSingle');
-      }, 800);
+      // $this.addClass('showSingle');
+      // // $pic.addClass('showSingle');
+      // setTimeout(function () { 
+      //     $this.removeClass('showSingle');
+      //     // $pic.removeClass('showSingle');
+      // }, 800);
+
+      
+      var color = colorThief.getColor($pic.find("img")[0]);//returns an array of rgb values
+      var hexValue = rgbToHex(color[0], color[1], color[2]);
+      var luma = 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2];
+      $(".works-pic").css("background-color",hexValue);
+      $this.css("color",hexValue);
+      $this.siblings().css("color", "#000");
+      if (luma < 50) {
+          $(".projet-note").css("color","#ddd");
+      }
+      else {
+          $(".projet-note").css("color","#000");
+      }
       // var $container = $this.parent(".works");
       // var $projet = $this.siblings(".projet");
       // if(!$projet.hasClass("clicked")) {

@@ -194,6 +194,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/scripts\/color-thief.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/color-thief.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/color-thief-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/scripts\/jquery-1.11.1.min.js": {
 		"fileType": 64,
 		"ignore": 1,
