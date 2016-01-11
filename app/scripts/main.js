@@ -2,29 +2,61 @@
 (function () {
   'use strict';
 
-
   $(window).on("load resize", function(){
-
+    $(".works-pic").mCustomScrollbar({
+      theme: "dark",
+      callbacks:{
+          whileScrolling:function(){  
+            $("header").addClass("down");
+            $(".logo").removeClass("fadeInDown");
+            $(".info").removeClass("fadeInUp").addClass("fadeOutDown");                      
+          },
+          onTotalScrollBack:function(){
+            $("header").removeClass("down");
+            $(".logo").addClass("fadeInDown");
+            $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
+          }
+      }
+    });
 
     function centerEl(el, container) {
-        var elHeight = el.outerHeight(true);
-        var aboveHeight = 0;
-        el.prevAll().each(function(){
-          aboveHeight += $(this).outerHeight(true);          
-        });
-        var windowHeight = $(window).height();
-        var offset;
+        // var elHeight = el.outerHeight(true);
+        // var aboveHeight = 0;
+        // el.prevAll().each(function(){
+        //   aboveHeight += $(this).outerHeight(true);          
+        // });
+        // var windowHeight = $(window).height();
+        // var offset;
 
-        if (elHeight < windowHeight) {
-            offset = aboveHeight - (windowHeight/2-elHeight/2);
-        }
-        else {
-          offset = aboveHeight;
-        }
+        // if (elHeight < windowHeight) {
+        //     offset = aboveHeight - (windowHeight/2-elHeight/2);
+        // }
+        // else {
+        //   offset = aboveHeight;
+        // }
         
-        container.animate({
-              scrollTop: offset
-          }, 500);
+        // container.animate({
+        //       scrollTop: offset
+        //   }, 500);
+        container.mCustomScrollbar('scrollTo', function(){ 
+          var elHeight = el.outerHeight(true);
+          var aboveHeight = 0;
+          el.prevAll().each(function(){
+            aboveHeight += $(this).outerHeight(true);          
+          });
+          var windowHeight = $(window).height();
+          var offset;
+
+          if (elHeight < windowHeight) {
+              offset = Math.max(0, (aboveHeight - (windowHeight/2-elHeight/2)));
+          }
+          else {
+            offset = aboveHeight;
+          }
+
+          return offset;
+        }, {scrollInertia:500});
+
     }
 
     // function isScrolledIntoView(el, view){
@@ -36,72 +68,78 @@
     //       return elementTop <= centerY && elementBottom >= centerY;
     //   }
 
-    function isScrolledIntoView(elem){
-          // var centerY = Math.max(0,(($(window).height()-$(elem).outerHeight(true)) / 2 +1));
-          // var elementTop = $(elem).offset().top;
-          // var elementBottom = elementTop + $(elem).height();
-          // return elementTop < centerY && elementBottom > centerY;
-          var centerY = $(window).height()/3;
-          var elementTop = $(elem).offset().top + 40;
-          var elementBottom = elementTop + $(elem).outerHeight(true);
-          return elementTop < centerY && elementBottom > centerY;
-      }
+    // function isScrolledIntoView(elem){
+    //       // var centerY = Math.max(0,(($(window).height()-$(elem).outerHeight(true)) / 2 +1));
+    //       // var elementTop = $(elem).offset().top;
+    //       // var elementBottom = elementTop + $(elem).height();
+    //       // return elementTop < centerY && elementBottom > centerY;
+    //       var centerY = $(window).height()/3;
+    //       var elementTop = $(elem).offset().top + 40;
+    //       var elementBottom = elementTop + $(elem).outerHeight(true);
+    //       return elementTop < centerY && elementBottom > centerY;
+    //   }
 
 
-    function scrollDirection(container) {
-      var position = container.scrollTop();
-      container.scroll(function(){
-        var scroll = container.scrollTop();
-        if (scroll > position) {
-          // scrolling downwards
-          $("header").addClass("down").removeClass("clicked");
-          $(".logo").removeClass("fadeInDown");
-          $(".info").removeClass("fadeInUp").addClass("fadeOutDown");
-        } else {
-          // scrolling upwards
-          $("header").removeClass("down");
-          $(".logo").addClass("fadeInDown");
-          $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
-        }
-        position = scroll;
-      });
-    }
+    // function scrollDirection(container) {
+    //   var position = container.scrollTop();
+    //   container.scroll(function(){
+    //     var scroll = container.scrollTop();
+    //     if (scroll > position) {
+    //       // scrolling downwards
+    //       $("header").addClass("down").removeClass("clicked");
+    //       $(".logo").removeClass("fadeInDown");
+    //       $(".info").removeClass("fadeInUp").addClass("fadeOutDown");
+    //     } else {
+    //       // scrolling upwards
+    //       $("header").removeClass("down");
+    //       $(".logo").addClass("fadeInDown");
+    //       $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
+    //     }
+    //     position = scroll;
+    //   });
+    // }
 
-    scrollDirection($(".works-pic"));
+    // scrollDirection($(".works-pic"));
     // scrollDirection($(".works-name"));
 
-      $(".works-pic").scroll(function() {
-        $(".work").each(function() {
-            var $this = $(this);
-            if(isScrolledIntoView($this)) {
-              if(!$this.hasClass("clicked")) {
-                  $this.addClass("clicked");
-                  // var pointer = "#"+$this.attr("id").split('-')[0];
-                  // console.log(pointer);
-                  // centerEl($(pointer), $(".works-name"));
-              }
-              $this.siblings().removeClass("clicked");
-            }
-        });
-      });
+      // $(".works-pic").scroll(function() {
+      //   $(".work").each(function() {
+      //       var $this = $(this);
+      //       if(isScrolledIntoView($this)) {
+      //         if(!$this.hasClass("clicked")) {
+      //             $this.addClass("clicked");
+      //         }
+      //         $this.siblings().removeClass("clicked");
+      //       }
+      //   });
+      // });
 
       
 
   $(".logo a").click(function(e){
     e.preventDefault();
-    $("header").toggleClass("clicked");
-    // $("#hello").toggleClass("fadeInDown");
+    var $header = $("header");
+    if ($header.hasClass("clicked")) {
+      $header.removeClass("clicked");
+    }
+    else {
+      $header.addClass("clicked");
+    }
+    // $("header").toggleClass("clicked");
   });
 
   $(".work-name").click(function(){
+      var $projets = $("#projets");
       var $this= $(this);
       var pointer = "#"+$this.attr("id")+"-pic";
       var $pic = $(pointer);
       centerEl($pic, $(".works-pic"));
-      // $this.addClass('expanded');
-      // $this.siblings().removeClass('expanded');
       centerEl($this, $(".works-name"));
-      
+      $this.addClass('showSingle');
+
+      setTimeout(function () { 
+          $this.removeClass('showSingle');
+      }, 800);
       // var $container = $this.parent(".works");
       // var $projet = $this.siblings(".projet");
       // if(!$projet.hasClass("clicked")) {

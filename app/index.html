@@ -27,6 +27,7 @@
     -->
 
     <!-- Page styles -->
+    <link rel="stylesheet" href="styles/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
@@ -49,7 +50,7 @@
 
     <main role="main">
       <section id="projets">
-      <div class="works-pic">
+      <div class="works-pic mCustomScrollbar" data-mcs-theme="dark">
         <div class="work" id="sysmo-pic">
           <img src="images/sysmo.png" alt="" class="work-pic">
           <div class="projet-note">two-column custom-scroll</div>
@@ -76,7 +77,7 @@
         </div>
         
       </div>
-      <div class="works-name">
+      <div class="works-name mCustomScrollbar" data-mcs-theme="dark">
         <div class="work-name" id="sysmo">Sysmo</div>
         <div class="work-name" id="exprimerie">Exprimerie</div>
         <div class="work-name" id="chen">Chen</div>
@@ -148,6 +149,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/TextPlugin.min.js"></script>
     <script src="scripts/snap.svg-min.js"></script>
     <script src="scripts/main.min.js"></script>
+    <script src="scripts/jquery.mCustomScrollbar.concat.min.js"></script>
     
   </body>
 </html>

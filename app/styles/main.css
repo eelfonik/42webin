@@ -2792,6 +2792,11 @@ header {
   header #hello {
     color: white;
     height: 200px;
+    width: 90%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5%;
     font-size: 1em; }
 
 header.clicked {
@@ -2845,6 +2850,12 @@ main {
 .info {
   display: none; }
 
+.mCSB_inside > .mCSB_container {
+  margin-right: 0px; }
+
+.mCSB_scrollTools {
+  width: 4px; }
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   html, body {
@@ -2872,7 +2883,7 @@ main {
     letter-spacing: 7.2vw;
     margin: 0 auto;
     padding: 0;
-    padding-top: 10px;
+    padding-top: 0px;
     width: 100%; }
     .logo .wrapper {
       width: 90%;
@@ -2930,37 +2941,56 @@ main {
     overflow: scroll; }
 
   .works-pic {
-    background-color: #eee;
-    padding-left: 5%; }
+    background-color: #eee; }
 
   .work {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
     padding: 40px 0; }
-
-  .work-pic {
-    width: 90%;
-    height: auto;
-    padding: 40px 10% 20px 0; }
+    .work img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      opacity: 1; }
+    .work:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 51%;
+      left: -10%;
+      width: 100vw;
+      height: 1.5px;
+      background-color: black;
+      z-index: 10; }
+    .work.showSingle:after {
+      width: 100vw;
+      background-color: black; }
 
   .work-name {
     cursor: pointer;
-    padding-top: 50px;
-    padding-bottom: 50px; }
-    .work-name.expanded {
-      height: 100%;
-      vertical-align: center; }
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 10; }
     .work-name:first-child {
-      padding-top: 200px; }
+      margin-top: 100px; }
     .work-name:last-child {
-      padding-bottom: 50vh; }
-
-  .work {
-    position: relative; }
-    .work img {
+      margin-bottom: calc(50vh - 100px); }
+    .work-name:after {
+      content: "";
       display: block;
-      width: 90%;
-      height: auto;
-      margin: 0 10% 0 0;
-      opacity: 1; }
+      position: absolute;
+      top: 51%;
+      right: 0;
+      width: 100vw;
+      height: 1.5px;
+      background-color: transparent;
+      z-index: 10; }
+    .work-name.showSingle:after {
+      width: 100vw;
+      background-color: black; }
 
   .projet-note {
     margin-top: 20px;
