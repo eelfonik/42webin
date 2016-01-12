@@ -139,6 +139,19 @@
       return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
 
+  // // Converts a hex colour to its opposite:
+
+  // function decimalToHex(decimal) {
+  // var hex = decimal.toString(16);
+  // if (hex.length == 1) hex = '0' + hex;
+  // return hex;
+  // }
+  // function hexToDecimal(hex) {return parseInt(hex,16);}
+   
+  // function returnOpposite(colour) {
+  //   return decimalToHex(255 - hexToDecimal(colour.substr(0,2))) + decimalToHex(255 - hexToDecimal(colour.substr(2,2))) + decimalToHex(255 -  hexToDecimal(colour.substr(4,2)));
+  // }
+
   $(".work-name").click(function(){
       var $projets = $("#projets");
       var $this= $(this);

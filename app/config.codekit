@@ -33,6 +33,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/cabane1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.85756e+06,
+		"inputAbbreviatedPath": "\/images\/cabane1.png",
+		"outputAbbreviatedPath": "\/images\/cabane1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/chen.png": {
 		"fileType": 32768,
 		"ignore": 0,
