@@ -577,6 +577,21 @@ textarea[contenteditable] {
 .icon-italic:before {
   content: "s"; }
 
+.slick-arrow {
+  position: absolute;
+  z-index: 10;
+  width: 50%;
+  height: 100%;
+  bottom: 0; }
+
+.slick-prev {
+  left: 0;
+  cursor: w-resize; }
+
+.slick-next {
+  right: 0;
+  cursor: e-resize; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Version - 3.4.0

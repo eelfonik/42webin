@@ -25,15 +25,25 @@
         }
 
         // Use event.pageX / event.pageY here
-        console.log(event.pageY);
+        
         if (event.pageY<= 50 || event.pageY >= $(window).height()- 40 ){
           $("header").removeClass("down");
           $(".logo").addClass("fadeInDown");
           $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
         }
+        else {
+          // $("header").addClass("down");
+          //   $(".logo").removeClass("fadeInDown");
+          //   $(".info").removeClass("fadeInUp").addClass("fadeOutDown");
+        }
     }
 
   $(window).on("load resize", function(){
+    $(".pic-slide").slick({
+      fade: true,
+      prevArrow: '<div data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"></div>', 
+      nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>'
+    });
     $(".works-pic").mCustomScrollbar({
       theme: "dark",
       callbacks:{
@@ -184,7 +194,6 @@
   // }
 
   $(".work-name").click(function(){
-      var $projets = $("#projets");
       var $this= $(this);
       var pointer = "#"+$this.attr("id")+"-pic";
       var $pic = $(pointer);
@@ -199,7 +208,8 @@
       // }, 800);
 
       
-      var color = colorThief.getColor($pic.find("img")[0]);//returns an array of rgb values
+      var color = colorThief.getColor($pic.find(".slick-current")[0]);//returns an array of rgb values
+      // console.log($pic.find("img")[0]);
       var hexValue = rgbToHex(color[0], color[1], color[2]);
       var luma = 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2];
       $(".works-pic").css("background-color",hexValue);

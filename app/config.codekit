@@ -575,6 +575,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/styles\/components\/_components\/_slick.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styles\/components\/_components\/_slick.scss",
+		"outputAbbreviatedPath": "\/styles\/components\/css\/_slick.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/styles\/components\/_components\/_subsection-title.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
