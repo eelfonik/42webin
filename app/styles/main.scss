@@ -104,6 +104,15 @@ main {
   display: none;
 }
 
+.projet-note {
+  margin-top: 20px;
+  font-size: 0.4em;
+  transition: color .6s ease;
+  a {
+    color: inherit;
+  }
+}
+
 // ---------------custom scrollbar---------------------
 .mCSB_inside > .mCSB_container{ margin-right: 0px; }
 .mCSB_scrollTools {
@@ -325,14 +334,6 @@ main {
 //     }
 // }
 
-.projet-note {
-  margin-top: 20px;
-  font-size: 0.4em;
-  transition: color .6s ease;
-  a {
-    color: inherit;
-  }
-}
 
 
 }

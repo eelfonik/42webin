@@ -2850,6 +2850,14 @@ main {
 .info {
   display: none; }
 
+.projet-note {
+  margin-top: 20px;
+  font-size: 0.4em;
+  -webkit-transition: color .6s ease;
+  transition: color .6s ease; }
+  .projet-note a {
+    color: inherit; }
+
 .mCSB_inside > .mCSB_container {
   margin-right: 0px; }
 
@@ -2955,14 +2963,6 @@ main {
     .work-name:first-child {
       margin-top: calc(50vh - 150px); }
     .work-name:last-child {
-      margin-bottom: calc(50vh - 100px); }
-
-  .projet-note {
-    margin-top: 20px;
-    font-size: 0.4em;
-    -webkit-transition: color .6s ease;
-    transition: color .6s ease; }
-    .projet-note a {
-      color: inherit; } }
+      margin-bottom: calc(50vh - 100px); } }
 
 /*# sourceMappingURL=main.css.map */
