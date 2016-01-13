@@ -1,6 +1,6 @@
 
 @import 'components/_normalize';
-@import '_h5bp';
+// @import '_h5bp';
 @import 'components/_components/_iconp';
 @import 'components/_components/_slick';
 @import 'components/_animate';
@@ -15,7 +15,61 @@
   font-style:   regular;
   font-variant: normal;
   font-stretch: normal;
-}   
+} 
+
+*:focus {
+  outline: 0;
+}
+
+.under-line {
+  position: relative;
+  &:after {
+    content:"";
+    position: absolute;
+    left:0;
+    top:1em;
+    height: 1px;
+    width: 100%;
+    background-color: inherit;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.3em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
+}  
 
 
 html,
@@ -29,6 +83,15 @@ body {
 
 a {
   text-decoration: none;
+  color:black;
+}
+a:visited,
+a:hover {
+  color:black;
+}
+
+a:focus {
+  outline: 0;
 }
 
 ol,ul,li {
@@ -79,11 +142,14 @@ header.down {
   animation-duration: 400ms;
   box-sizing: border-box;
   z-index: 10;
+  line-height: 1em;
 }
 
 .logo {
   font-size: 2em;
   letter-spacing: 0.5em;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .logo a {
@@ -103,15 +169,31 @@ main {
 
 .info {
   display: none;
+  padding-top: 8px;
+  padding-bottom: 7px;
 }
 
 .projet-note {
   margin-top: 20px;
-  font-size: 0.4em;
+  font-size: 0.35em;
   transition: color .6s ease;
   a {
     color: inherit;
+    position: relative;
+    &:hover:after {
+      content:"";
+      display: block;
+      position: absolute;
+      left:0;
+      top:1.2em;
+      height: 1px;
+      width: 100%;
+      background-color: black;
+    }
   }
+  // div:first-child {
+  //   font-size: 0.8em;
+  // }
 }
 
 // ---------------custom scrollbar---------------------
@@ -139,7 +221,7 @@ header {
   }
 }
 .fold {
-  text-transform: uppercase;  
+  // text-transform: uppercase;  
 }
 
 .logo {
@@ -147,8 +229,8 @@ header {
   letter-spacing: 7.2vw;
   margin: 0 auto;
   padding: 0;
-  padding-top: 0px;
-  
+  padding-top: 10px;
+  padding-bottom: 5px;
   width:100%;
   .wrapper {
     width: 90%;
@@ -168,6 +250,8 @@ header {
   bottom: 0;
   left:0;
   padding: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
   .wrapper {
     width: 90%;
     margin: 0 auto;

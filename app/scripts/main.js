@@ -28,7 +28,7 @@
         
         if (event.pageY<= 50 || event.pageY >= $(window).height()- 40 ){
           $("header").removeClass("down");
-          $(".logo").addClass("fadeInDown");
+          $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
           $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
         }
         else {
@@ -49,12 +49,12 @@
       callbacks:{
           whileScrolling:function(){  
             $("header").addClass("down");
-            $(".logo").removeClass("fadeInDown");
+            $(".logo").addClass("fadeOutUp").removeClass("fadeInDown");
             $(".info").removeClass("fadeInUp").addClass("fadeOutDown");                      
           },
           onTotalScrollBack:function(){
             $("header").removeClass("down");
-            $(".logo").addClass("fadeInDown");
+            $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
             $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
           }
       }
