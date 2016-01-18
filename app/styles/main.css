@@ -2627,21 +2627,33 @@ Copyright (c) 2015 Daniel Eden
     content: "";
     position: absolute;
     left: 0;
-    top: 1em;
+    top: 1.2em;
     height: 1px;
     width: 100%;
-    background-color: inherit; }
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out; }
+  .under-line:hover:after {
+    background-color: black;
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out; }
 
-.hover-under-line {
+.under-line.light {
   position: relative; }
-  .hover-under-line:hover:after {
+  .under-line.light:after {
     content: "";
     position: absolute;
     left: 0;
     top: 1.2em;
     height: 1px;
     width: 100%;
-    background-color: black; }
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out; }
+  .under-line.light:hover:after {
+    background-color: white;
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out; }
 
 .clearfix:after {
   content: "";
@@ -2698,25 +2710,46 @@ img {
 
 header {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   background-color: white;
-  -webkit-transform: translateY(-200px);
-      -ms-transform: translateY(-200px);
-          transform: translateY(-200px);
+  -webkit-transform: translateY(-600px);
+      -ms-transform: translateY(-600px);
+          transform: translateY(-600px);
+  -webkit-transform: translateY(-70vh);
+      -ms-transform: translateY(-70vh);
+          transform: translateY(-70vh);
   -webkit-transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out; }
   header #hello {
     color: white;
-    height: 200px;
+    height: 600px;
+    height: 70vh;
     width: 90%;
     box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 5%;
     font-size: 1em; }
+    header #hello .contacts {
+      font-size: 2em;
+      margin-top: 20px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 90%; }
+      header #hello .contacts .contact {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+      header #hello .contacts a,
+      header #hello .contacts a:visited,
+      header #hello .contacts a:hover {
+        color: white; }
 
 header.clicked {
   background-color: black;
@@ -2774,13 +2807,20 @@ main {
   padding-top: 8px;
   padding-bottom: 7px; }
 
+.pic-slide {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
+
 .projet-note {
   margin-top: 20px;
-  font-size: 0.35em;
+  font-size: 0.7em;
+  text-align: center;
   -webkit-transition: color .6s ease;
   transition: color .6s ease; }
   .projet-note a {
     color: inherit; }
+  .projet-note .projet-des {
+    padding-top: 10px;
+    font-size: 1.2em; }
 
 .mCSB_inside > .mCSB_container {
   margin-right: 0px; }
@@ -2806,6 +2846,9 @@ main {
     header #hello {
       font-size: 2em;
       height: 70vh; }
+      header #hello .contacts {
+        margin-top: 2em;
+        font-size: 1.2em; }
 
   .logo {
     font-size: 2.5vw;
@@ -2858,9 +2901,6 @@ main {
     height: 100%;
     overflow: scroll; }
 
-  .works-pic {
-    background-color: #eee; }
-
   .work {
     position: relative;
     width: 80%;
@@ -2874,7 +2914,6 @@ main {
       display: block;
       width: 100%;
       height: auto;
-      padding-top: 20px;
       opacity: 1; }
 
   .work-name {
@@ -2887,6 +2926,9 @@ main {
     .work-name:first-child {
       margin-top: calc(50vh - 150px); }
     .work-name:last-child {
-      margin-bottom: calc(50vh - 100px); } }
+      margin-bottom: calc(50vh - 100px); }
+
+  .projet-note {
+    font-size: 0.35em; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -217,9 +217,11 @@
       $this.siblings().css("color", "#000");
       if (luma < 50) {
           $(".projet-note").css("color","#ddd");
+          $(".under-line").addClass("light");
       }
       else {
-          $(".projet-note").css("color","#000");
+          $(".projet-note").css("color","#111");
+          $(".under-line").removeClass("light");
       }
       // var $container = $this.parent(".works");
       // var $projet = $this.siblings(".projet");
