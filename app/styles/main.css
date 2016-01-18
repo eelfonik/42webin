@@ -2801,6 +2801,8 @@ main {
   padding-bottom: 30px;
   padding-top: 50px;
   font-size: 2em; }
+  main .works-name {
+    display: none; }
 
 .info {
   display: none;
@@ -2808,6 +2810,7 @@ main {
   padding-bottom: 7px; }
 
 .pic-slide {
+  width: 100%;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
 
 .projet-note {
@@ -2889,6 +2892,8 @@ main {
     height: 100%;
     padding-top: 0px;
     padding-bottom: 0px; }
+    main .works-name {
+      display: block; }
 
   #projets {
     text-align: center;

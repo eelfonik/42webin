@@ -204,6 +204,16 @@ main {
   padding-bottom: 30px;
   padding-top: 50px;
   font-size: 2em;
+  .works-name {
+    display: none;
+  }
+  .works-pic {
+    // background-color: #eee;
+  // padding-left: 5%;
+    .work {
+      // margin:50px 0;
+    }
+  }
 }
 
 .info {
@@ -213,7 +223,11 @@ main {
 }
 
 .pic-slide {
+  width: 100%;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  img {
+    
+  }
 }
 
 .projet-note {
@@ -315,6 +329,9 @@ main {
   padding-top: 0px;
   padding-bottom: 0px;
   // background-color: #eee;
+  .works-name {
+    display: block;
+  }
 }
 
 #projets {
@@ -366,11 +383,6 @@ main {
   height: 100%;
   overflow: scroll;
   // position: relative;
-}
-
-.works-pic {
-  // background-color: #eee;
-  // padding-left: 5%;
 }
 
 .work {
