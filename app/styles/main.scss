@@ -185,7 +185,8 @@ header.down {
 }
 
 .logo {
-  font-size: 2em;
+  text-align: center;
+  font-size: 1.5em;
   letter-spacing: 0.5em;
   padding-top: 10px;
   padding-bottom: 5px;
@@ -210,10 +211,21 @@ main {
   .works-pic {
     // background-color: #eee;
   // padding-left: 5%;
-    .work {
-      // margin:50px 0;
-    }
   }
+}
+
+.work {
+      padding:40px 0;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+.pic-slide,
+.projet-note {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info {
@@ -222,18 +234,9 @@ main {
   padding-bottom: 7px;
 }
 
-.pic-slide {
-  width: 100%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  img {
-    
-  }
-}
-
 .projet-note {
   margin-top: 20px;
-  font-size: 0.7em;
-  text-align: center;
+  font-size: 0.5em;
   transition: color .6s ease;
   a {
     color: inherit;
@@ -385,11 +388,15 @@ main {
   // position: relative;
 }
 
+
 .work {
   position: relative;
   width:80%;
+  margin:0;
   margin-left: 10%;
-  padding:40px 0;
+  box-shadow: 0 0 0;
+  border: 0px;
+  // padding:40px 0;
   &:first-child {
       margin-top: 100px;
   }
@@ -420,6 +427,16 @@ main {
   //     background-color: black;
   //   }
   
+}
+.pic-slide {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pic-slide,
+.projet-note {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .work-name {
@@ -453,7 +470,12 @@ main {
 }
 
 .projet-note {
+  text-align: center;
   font-size: 0.35em;
+  // .projet-des {
+  //   padding-top: 10px;
+  //   font-size: 1.2em;
+  // }
 }
 
 

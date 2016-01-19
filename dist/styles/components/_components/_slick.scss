@@ -1,0 +1,16 @@
+.slick-arrow {
+	position: absolute;
+	z-index: 10;
+	width:50%;
+	height: 100%;
+	bottom:0;
+	// cursor: pointer;
+}
+.slick-prev {
+	left:0;
+	cursor: w-resize;
+}
+.slick-next {
+	right: 0;
+	cursor: e-resize;
+}

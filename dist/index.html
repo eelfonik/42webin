@@ -27,66 +27,122 @@
     -->
 
     <!-- Page styles -->
-    <link rel="stylesheet" href="styles/main.56d67b21.css">
+    <link rel="stylesheet" href="styles/jquery.mCustomScrollbar.36345d55.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+    <link rel="stylesheet" href="styles/main.c2c7edd8.css">
   </head>
   <body>
-    <header class="app-bar promote-layer">
-      <div class="app-bar-container">
-        <!-- <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button> -->
-        <div class="logo"><a href="">mengxue&nbsp;jin</a></div>
-         <section class="info">
-          <a href="" class="contact">twitter</a><a href="" class="contact">email</a><a href="" class="contact">github</a>
+    <header>
+        <section id="hello" class="animated">
+        <div>A tool maniac, quick learner, problem solver.</br> Build things with delight and devotion.</div>
+        <div>Former communicator fascinated by new media,</br> now a coder embraces design.</div>
+        <div class="contacts">
+          <a href="https://twitter.com/kinoflee" class="contact" target="_blank"><i class="icon-twitter-outline large"></i></a>
+          <a href="mailto:kinoflee@gmail.com" class="contact"><i class="icon-send-mail-outline large"></i></a>
+          <a href="https://github.com/eelfonik" class="contact" target="_blank"><i class="icon-github-outline large"></i></a>
         </div>
+      </section>
+        <div class="logo fold animated fadeInDown">
+        <div class="wrapper"><a href="">MENGXUE&nbsp;JIN</a></div>
+        </div>
+        
+    </header> 
+
+    <main role="main">
+      <section id="projets" class="clearfix">
+      <div class="works-pic mCustomScrollbar" data-mcs-theme="dark">
+
+        <div class="work" id="chen-pic">
+          <div class="pic-slide">
+            <img src="images/chen1.png" alt="">
+            <img src="images/chen2.png" alt="">
+            <img src="images/chen3.png" alt="">
+            <img src="images/chen4.png" alt="">
+          </div>
+          <div class="projet-note">
+            <div class="projet-tech">gulp, git, responsive</div>
+            <div class="projet-des">portfolio site and web experiment for Paris base designer <a class="under-line" href="http://xing-chen.net" target="_blank">Chen</a></div>
+          </div>
+        </div>
+
+        <div class="work" id="sysmo-pic">
+          <div class="pic-slide">
+            <img src="images/sysmo1.png" alt="">
+            <img src="images/sysmo2.png" alt="">
+          </div>
+          <div class="projet-note">
+          <div class="projet-tech">two-column, custom-scroll</div><div class="projet-des">official site for swiss manufactory <a class="under-line" href="http://sysmo.ch" target="_blank">Sysmo</a></div>
+          </div>
+        </div>
+        <div class="work" id="yz-pic">
+          <div class="pic-slide">
+            <img src="images/yz1.png" alt="">
+            <img src="images/yz2.png" alt="">
+            <img src="images/yz3.png" alt="">
+          </div>
+          <div class="projet-note">
+          <div class="projet-tech">visual design, tumblr-fetch</div>
+          <div class="projet-des">official site for fashion brand <a class="under-line" href="http://yingzicui.com" target="_blank">Yingzi.C</a></div>
+          </div>
+        </div>
+        <div class="work" id="cabane-pic">
+          <div class="pic-slide">
+            <img src="images/cabane2.png" alt="">
+            <img src="images/cabane3.png" alt="">
+            <img src="images/cabane1.png" alt="">
+          </div>
+          <div class="projet-note">
+          <div class="projet-tech">WordPress, responsive, multi-language</div>
+          <div class="projet-des">site for french cabin construction company</br><a class="under-line" href="http://www.la-cabane-perchee.com" target="_blank">La Cabane Perchée</a></div>
+          </div>
+        </div>
+        <div class="work" id="exprimerie-pic">
+          <div class="pic-slide">
+            <img src="images/exprimerie1.png" alt="">
+            <img src="images/exprimerie2.png" alt="">
+            <img src="images/exprimerie3.png" alt="">
+          </div>
+          <div class="projet-note">
+            <div class="projet-tech">WordPress, one-page, typography</div>
+            <div class="projet-des">site for educational atelier <a class="under-line" href="http://exprimerie.ch" target="_blank">Exprimerie</a></div>
+          </div>
+        </div>
+        <div class="work" id="criloi-pic">
+          <div class="pic-slide">
+            <img src="images/criloi1.png" alt="">
+            <img src="images/criloi2.png" alt="">
+            <img src="images/criloi3.png" alt="">
+          </div>
+          <div class="projet-note">
+          <div class="projet-tech">Sass, jQuery</div>
+          <div class="projet-des">official site for fashion brand <a class="under-line" href="http://www.cristinaloi.com/" target="_blank">Criloi</a></div>
+          </div>
+        </div>
+        
       </div>
-    </header>
+      <nav class="works-name mCustomScrollbar" data-mcs-theme="dark">
+        <div class="work-name" id="sysmo">Sysmo</div>
+        <div class="work-name" id="exprimerie">Exprimerie</div>
+        <div class="work-name" id="chen">Chen</div>
+        <div class="work-name" id="cabane">La Cabane Perchee</div>
+        <div class="work-name" id="criloi">Criloi</div>
+        <div class="work-name" id="yz">Yingzi.C</div>
+      </nav>
 
-    <!-- <nav class="navdrawer-container promote-layer">
+      </section>
+
       
-      <ul>
-        <li><a href="#work">work</a></li>
-        <li><a href="#hello">about</a></li>
-      </ul>
-    </nav> -->
-
-    <main>
-      <section id="work">
-      <ul class="list-link">
-        <li><a href="http://exprimerie.ch">Exprimerie</a>
-        <div>WordPress one-page typography</div>
-        </li>
-        <li><a href="http://xing-chen.net" target="_blank">XingChen</a>
-        <div>gulp git responsive</div>
-        </li>
-        <li><a href="http://demo.la-cabane-perchee.com/" target="_blank">La cabane perchee</a>
-        <div>WordPress responsive multi-language php</div>
-        </li>
-        <li><a href="http://www.cristinaloi.com/" target="_blank">Criloi</a>
-        <div>collaboration brand</div>
-        </li>
-        <li><a href="http://yingzicui.com" target="_blank">Yingzi.C</a>
-        <div>web-design brand layout</div>
-        </li>
-      </ul>
-      </section>
-
-      <!-- <section id="lab">
-        <h2>Lab</h2>
-      </section> -->
-
-      <section id="hello">
-        <div>A tool maniac, quick learner, problem solver. Build things with delight and devotion.</div>
-        <div>Former communicator fascinated by new media, now a coder embraces design.</div>
-        <!-- <div class="info">
-          <a href="" class="contact"><i class="icon-twitter-outline large"></i></a>
-          <a href="" class="contact"><i class="icon-send-mail-outline large"></i></a>
-          <a href="" class="contact"><i class="icon-call-phone-outline large"></i></a>
-          <a href="" class="contact"><i class="icon-github-outline large"></i></a>
-        </div> -->
-      </section>
       
     </main>
-    
-    <script src="scripts/main.min.61a7b3a1.js"></script>
-    
+
+    <footer>
+        <div class="info fold animated fadeInUp">
+          <div class="wrapper">
+          <a href="https://twitter.com/kinoflee" target="_blank" class="contact">TWITTER</a><a href="mailto:kinoflee@gmail.com" class="contact">EMAIL</a><a href="https://github.com/eelfonik" target="_blank" class="contact">GITHUB</a>
+          </div>
+        </div>
+    </footer>   
+    <script src="scripts/snap.svg-min.45196f9f.js"></script>
+    <script src="scripts/main.min.b058928a.js"></script>
   </body>
 </html>
