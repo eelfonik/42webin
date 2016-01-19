@@ -27,9 +27,11 @@
         // Use event.pageX / event.pageY here
         
         if (event.pageY<= 50 || event.pageY >= $(window).height()- 40 ){
-          $("header").removeClass("down");
-          $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
-          $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
+          if (!$("header").hasClass("clicked") && $("header").hasClass("down")) {
+              $("header").removeClass("down");
+              $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
+              $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
+            } 
         }
         else {
           // $("header").addClass("down");
@@ -39,6 +41,7 @@
     }
 
   $(window).on("load", function(){
+    var $header = $("header");
     $(".pic-slide").slick({
       fade: true,
       lazyLoad: 'progressive',
@@ -48,15 +51,31 @@
     $(".works-pic").mCustomScrollbar({
       theme: "dark",
       callbacks:{
-          whileScrolling:function(){  
-            $("header").addClass("down");
-            $(".logo").addClass("fadeOutUp").removeClass("fadeInDown");
-            $(".info").removeClass("fadeInUp").addClass("fadeOutDown");                      
+          whileScrolling:function(){
+            if (!$header.hasClass("clicked") && !$header.hasClass("down")) {
+              $header.addClass("down");
+              $(".logo").addClass("fadeOutUp").removeClass("fadeInDown");
+              $(".info").removeClass("fadeInUp").addClass("fadeOutDown"); 
+            }
+            // else {
+            //   $header.removeClass("clicked").delay(400)
+            //            .queue(function() {
+            //                $(this).addClass("down");
+            //                $(this).dequeue();
+            //            });
+            // }
+            // else {
+            //   $header.addClass("down");
+            // } 
+            // $(".logo").addClass("fadeOutUp").removeClass("fadeInDown");
+            // $(".info").removeClass("fadeInUp").addClass("fadeOutDown");                      
           },
           onTotalScrollBack:function(){
-            $("header").removeClass("down");
-            $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
-            $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
+            if (!$header.hasClass("clicked") && $header.hasClass("down")) {
+              $header.removeClass("down");
+              $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
+              $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
+            } 
           }
       }
     });
@@ -160,7 +179,7 @@
 
   $(".logo a").click(function(e){
     e.preventDefault();
-    $("header").toggleClass("clicked");
+    $header.toggleClass("clicked");
   });
 
   var colorThief = new ColorThief();

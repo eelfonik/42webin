@@ -2773,10 +2773,10 @@ header.down {
   -webkit-transform: translateY(-100vh);
       -ms-transform: translateY(-100vh);
           transform: translateY(-100vh);
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out; }
+  -webkit-transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out; }
 
 .fold {
   font-family: 'NotCourierSansBold', Helvetica, Arial, sans-serif;
@@ -2810,7 +2810,7 @@ main {
     display: none; }
 
 .work {
-  padding: 40px 0;
+  padding: 5% 0;
   margin: 20px 0;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
@@ -2828,14 +2828,16 @@ main {
 
 .projet-note {
   margin-top: 20px;
-  font-size: 0.5em;
+  font-size: 0.4em;
   -webkit-transition: color .6s ease;
   transition: color .6s ease; }
   .projet-note a {
     color: inherit; }
+  .projet-note div:last-child {
+    margin-top: 10px; }
   .projet-note .projet-des {
-    padding-top: 10px;
-    font-size: 1.2em; }
+    padding-top: 20px;
+    font-size: 1.5em; }
 
 .mCSB_inside > .mCSB_container {
   margin-right: 0px; }
@@ -2924,9 +2926,10 @@ main {
     margin: 0;
     margin-left: 10%;
     box-shadow: 0 0 0;
-    border: 0px; }
+    border: 0px;
+    padding: 40px 0 60px 0; }
     .work:first-child {
-      margin-top: 100px; }
+      margin-top: 20vh; }
     .work:last-child {
       padding-bottom: 150px; }
     .work img {
@@ -2957,6 +2960,8 @@ main {
       margin-bottom: calc(50vh - 100px); }
 
   .projet-note {
-    text-align: center;
-    font-size: 0.35em; } }
+    font-size: 0.28em; }
+    .projet-note .projet-des {
+      padding-top: 10px; } }
+
 /*# sourceMappingURL=main.css.map */
