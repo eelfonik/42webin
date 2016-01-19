@@ -4,7 +4,7 @@
 	width:50%;
 	height: 100%;
 	bottom:0;
-	// cursor: pointer;
+	display: none !important;
 }
 .slick-prev {
 	left:0;
@@ -13,4 +13,10 @@
 .slick-next {
 	right: 0;
 	cursor: e-resize;
+}
+
+@media all and (min-width: 990px) {
+	.slick-arrow {
+		display: block !important;
+	}
 }

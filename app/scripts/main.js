@@ -186,29 +186,14 @@
   // function returnOpposite(colour) {
   //   return decimalToHex(255 - hexToDecimal(colour.substr(0,2))) + decimalToHex(255 - hexToDecimal(colour.substr(2,2))) + decimalToHex(255 -  hexToDecimal(colour.substr(4,2)));
   // }
-
-  $(".work-name").click(function(){
-      var $this= $(this);
-      var pointer = "#"+$this.attr("id")+"-pic";
-      var $pic = $(pointer);
-      centerEl($pic, $(".works-pic"));
-      centerEl($this, $(".works-name"));
-
-      // $this.addClass('showSingle');
-      // // $pic.addClass('showSingle');
-      // setTimeout(function () { 
-      //     $this.removeClass('showSingle');
-      //     // $pic.removeClass('showSingle');
-      // }, 800);
-
-      
-      var color = colorThief.getColor($pic.find(".slick-current")[0]);//returns an array of rgb values
+  function changeColor(img, name) {
+      var color = colorThief.getColor(img.find(".slick-current")[0]);//returns an array of rgb values
       // console.log($pic.find("img")[0]);
       var hexValue = rgbToHex(color[0], color[1], color[2]);
       var luma = 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2];
       $(".works-pic").css("background-color",hexValue);
-      $this.css("color",hexValue);
-      $this.siblings().css("color", "#000");
+      name.css("color",hexValue);
+      name.siblings().css("color", "#000");
       if (luma < 50) {
           $(".projet-note").css("color","#ddd");
           $(".under-line").addClass("light");
@@ -217,6 +202,32 @@
           $(".projet-note").css("color","#111");
           $(".under-line").removeClass("light");
       }
+  }
+
+  $(".slick-arrow").click(function(){
+      var $pointer = $(this).closest(".work");
+      var pointer = "#"+$pointer.attr("id").split('-')[0];
+      var $name = $(pointer);
+      centerEl($pointer, $(".works-pic"));
+      centerEl($name, $(".works-name"));
+      changeColor($pointer, $name);
+  })
+
+  $(".work-name").click(function(){
+      var $this= $(this);
+      var pointer = "#"+$this.attr("id")+"-pic";
+      var $pic = $(pointer);
+      centerEl($pic, $(".works-pic"));
+      centerEl($this, $(".works-name"));
+      changeColor($pic, $this);
+
+      // $this.addClass('showSingle');
+      // // $pic.addClass('showSingle');
+      // setTimeout(function () { 
+      //     $this.removeClass('showSingle');
+      //     // $pic.removeClass('showSingle');
+      // }, 800);
+
       // var $container = $this.parent(".works");
       // var $projet = $this.siblings(".projet");
       // if(!$projet.hasClass("clicked")) {
@@ -226,9 +237,15 @@
       // centerEl($projet);
   });
     
+  });//onload function
+
+  $(window).on("resize", function(){
+    if ($(window).width()<=990) {
+      $(".works-pic").css("background-color","transparent");
+      $(".projet-note").css("color","#111");
+      $(".under-line").removeClass("light");
+    }
   });
-
-
 
 
   // var querySelector = document.querySelector.bind(document);

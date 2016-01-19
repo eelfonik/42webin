@@ -425,7 +425,8 @@ blockquote {
   z-index: 10;
   width: 50%;
   height: 100%;
-  bottom: 0; }
+  bottom: 0;
+  display: none !important; }
 
 .slick-prev {
   left: 0;
@@ -435,6 +436,9 @@ blockquote {
   right: 0;
   cursor: e-resize; }
 
+@media all and (min-width: 990px) {
+  .slick-arrow {
+    display: block !important; } }
 /*!
 Animate.css - http://daneden.me/animate
 Version - 3.4.0
@@ -2955,5 +2959,4 @@ main {
   .projet-note {
     text-align: center;
     font-size: 0.35em; } }
-
 /*# sourceMappingURL=main.css.map */
