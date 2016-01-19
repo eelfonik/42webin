@@ -41,6 +41,7 @@
   $(window).on("load", function(){
     $(".pic-slide").slick({
       fade: true,
+      lazyLoad: 'progressive',
       prevArrow: '<div data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"></div>', 
       nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>'
     });
