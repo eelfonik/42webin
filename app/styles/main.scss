@@ -172,7 +172,7 @@ header.clicked {
 
 header.down {
   transform: translateY(-100vh);
-  transition: transform 400ms ease-in-out; 
+  transition: transform 400ms ease-in-out, background-color 400ms ease-in-out; 
 }
 
 .fold {
