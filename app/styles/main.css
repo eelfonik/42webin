@@ -2836,6 +2836,7 @@ main {
   .projet-note div:last-child {
     margin-top: 10px; }
   .projet-note .projet-des {
+    padding-top: 20px;
     font-size: 1.5em; }
 
 .mCSB_inside > .mCSB_container {
@@ -2928,7 +2929,7 @@ main {
     border: 0px;
     padding: 40px 0 60px 0; }
     .work:first-child {
-      margin-top: 100px; }
+      margin-top: 20vh; }
     .work:last-child {
       padding-bottom: 150px; }
     .work img {
