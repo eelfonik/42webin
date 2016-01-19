@@ -38,10 +38,9 @@
         }
     }
 
-  $(window).on("load resize", function(){
+  $(window).on("load", function(){
     $(".pic-slide").slick({
       fade: true,
-      respondTo: 'slider',
       prevArrow: '<div data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"></div>', 
       nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>'
     });
@@ -160,14 +159,7 @@
 
   $(".logo a").click(function(e){
     e.preventDefault();
-    var $header = $("header");
-    if ($header.hasClass("clicked")) {
-      $header.removeClass("clicked");
-    }
-    else {
-      $header.addClass("clicked");
-    }
-    // $("header").toggleClass("clicked");
+    $("header").toggleClass("clicked");
   });
 
   var colorThief = new ColorThief();

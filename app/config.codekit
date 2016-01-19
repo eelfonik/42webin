@@ -317,7 +317,7 @@
 		},
 	"\/scripts\/color-thief.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/color-thief.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/color-thief-min.js",
@@ -339,7 +339,7 @@
 		},
 	"\/scripts\/jquery.mCustomScrollbar.concat.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/jquery.mCustomScrollbar.concat.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/jquery.mCustomScrollbar.concat.min-min.js",
@@ -387,6 +387,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scripts\/main1.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/main1.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/scripts\/slick.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/slick.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/slick-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1218,6 +1229,24 @@
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/scripts\/jquery-1.11.1.min.js",
 			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/scripts\/slick.js",
+			"position": 1,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/scripts\/jquery.mCustomScrollbar.concat.min.js",
+			"position": 2,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/scripts\/color-thief.js",
+			"position": 3,
 			"type": 0
 			}
 		],
