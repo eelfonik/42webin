@@ -1239,15 +1239,15 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/scripts\/jquery.mCustomScrollbar.concat.min.js",
+			"linkedFileAbbreviatedPath": "\/scripts\/color-thief.js",
 			"position": 2,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/scripts\/color-thief.js",
+			"linkedFileAbbreviatedPath": "\/scripts\/jquery.mCustomScrollbar.concat.min.js",
 			"position": 3,
-			"type": 0
+			"type": 1
 			}
 		],
 	"\/scripts\/main1.js": [
