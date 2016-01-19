@@ -2810,7 +2810,7 @@ main {
     display: none; }
 
 .work {
-  padding: 20px 0 20px 0;
+  padding: 5% 0;
   margin: 20px 0;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
@@ -2834,10 +2834,8 @@ main {
   .projet-note a {
     color: inherit; }
   .projet-note div:last-child {
-    margin-top: 10px;
-    margin-bottom: 20px; }
+    margin-top: 10px; }
   .projet-note .projet-des {
-    padding-top: 40px;
     font-size: 1.5em; }
 
 .mCSB_inside > .mCSB_container {
@@ -2928,7 +2926,7 @@ main {
     margin-left: 10%;
     box-shadow: 0 0 0;
     border: 0px;
-    padding: 40px 0; }
+    padding: 40px 0 60px 0; }
     .work:first-child {
       margin-top: 100px; }
     .work:last-child {
