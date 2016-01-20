@@ -109,13 +109,15 @@ a {
   color:black;
 }
 a:visited,
-a:hover {
-  color:black;
-}
-
+a:hover,
 a:focus {
+  color:black;
   outline: 0;
 }
+
+// a:focus {
+//   outline: 0;
+// }
 
 ol,ul,li {
   list-style: none;
@@ -126,12 +128,13 @@ img {
 }
 
 header {
+  cursor: n-resize;
   position: fixed;
   z-index: 100;
   width: 100%;
   background-color: white;
-  transform: translateY(-600px);
-  transform: translateY(-70vh);
+  transform: translate3d(0, -600px,0);
+  transform: translate3d(0, -70vh, 0);
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
   #hello {
     color:white;
@@ -162,16 +165,20 @@ header {
 
 header.clicked {
   background-color: black;
-  transform: translateY(0);
+  transform: translate3d(0,0,0);
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
   .logo {
     color: white;
     transition: color 400ms ease-in-out;
+    cursor: n-resize;
+    a {
+      cursor: n-resize;
+    }
   }
 }
 
 header.down {
-  transform: translateY(-100vh);
+  transform: translate3d(0, -100%, 0);
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out; 
 }
 
@@ -179,6 +186,8 @@ header.down {
   font-family: 'NotCourierSansBold', Helvetica, Arial, sans-serif;
   display: block;
   animation-duration: 400ms;
+  // animation-delay:400ms;
+  animation-timing-function:ease-in;
   box-sizing: border-box;
   z-index: 10;
   line-height: 1em;
@@ -190,6 +199,7 @@ header.down {
   letter-spacing: 0.5em;
   padding-top: 10px;
   padding-bottom: 5px;
+  cursor: s-resize;
 }
 
 .logo a {
@@ -197,6 +207,7 @@ header.down {
   color: inherit;
   font-weight: normal;
   width: 100%;
+  cursor: s-resize;
 }
 
 main {
@@ -290,9 +301,8 @@ header {
   font-size: 2.5vw;
   letter-spacing: 7.2vw;
   margin: 0 auto;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  // padding-top: 10px;
+  // padding-bottom: 5px;
   width:100%;
   .wrapper {
     width: 90%;
@@ -311,9 +321,8 @@ header {
   position: fixed;
   bottom: 0;
   left:0;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  // padding-top: 10px;
+  // padding-bottom: 5px;
   .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -391,6 +400,13 @@ main {
   overflow: scroll;
   // position: relative;
 }
+
+// .works-pic {
+//   width: 60%;
+// }
+// .works-name {
+//   width: 40%;
+// }
 
 
 .work {
