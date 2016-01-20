@@ -2700,10 +2700,9 @@ a {
   color: black; }
 
 a:visited,
-a:hover {
-  color: black; }
-
+a:hover,
 a:focus {
+  color: black;
   outline: 0; }
 
 ol, ul, li {
@@ -2713,16 +2712,15 @@ img {
   max-width: 100%; }
 
 header {
+  cursor: n-resize;
   position: fixed;
   z-index: 100;
   width: 100%;
   background-color: white;
-  -webkit-transform: translateY(-600px);
-      -ms-transform: translateY(-600px);
-          transform: translateY(-600px);
-  -webkit-transform: translateY(-70vh);
-      -ms-transform: translateY(-70vh);
-          transform: translateY(-70vh);
+  -webkit-transform: translate3d(0, -600px, 0);
+          transform: translate3d(0, -600px, 0);
+  -webkit-transform: translate3d(0, -70vh, 0);
+          transform: translate3d(0, -70vh, 0);
   -webkit-transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
@@ -2757,9 +2755,8 @@ header {
 
 header.clicked {
   background-color: black;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
@@ -2767,12 +2764,14 @@ header.clicked {
   header.clicked .logo {
     color: white;
     -webkit-transition: color 400ms ease-in-out;
-    transition: color 400ms ease-in-out; }
+    transition: color 400ms ease-in-out;
+    cursor: n-resize; }
+    header.clicked .logo a {
+      cursor: n-resize; }
 
 header.down {
-  -webkit-transform: translateY(-100vh);
-      -ms-transform: translateY(-100vh);
-          transform: translateY(-100vh);
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
   -webkit-transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: background-color 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, background-color 400ms ease-in-out;
@@ -2783,6 +2782,8 @@ header.down {
   display: block;
   -webkit-animation-duration: 400ms;
           animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
   box-sizing: border-box;
   z-index: 10;
   line-height: 1em; }
@@ -2792,13 +2793,15 @@ header.down {
   font-size: 1.5em;
   letter-spacing: 0.5em;
   padding-top: 10px;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  cursor: s-resize; }
 
 .logo a {
   text-decoration: none;
   color: inherit;
   font-weight: normal;
-  width: 100%; }
+  width: 100%;
+  cursor: s-resize; }
 
 main {
   width: 90%;
@@ -2871,9 +2874,6 @@ main {
     font-size: 2.5vw;
     letter-spacing: 7.2vw;
     margin: 0 auto;
-    padding: 0;
-    padding-top: 10px;
-    padding-bottom: 5px;
     width: 100%; }
     .logo .wrapper {
       width: 90%;
@@ -2888,10 +2888,7 @@ main {
     letter-spacing: 3.65vw;
     position: fixed;
     bottom: 0;
-    left: 0;
-    padding: 0;
-    padding-top: 10px;
-    padding-bottom: 5px; }
+    left: 0; }
     .info .wrapper {
       width: 90%;
       margin: 0 auto; }
