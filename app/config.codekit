@@ -1226,25 +1226,25 @@
 "manualImportLinks": {
 	"\/scripts\/main.js": [
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/jquery-1.11.1.min.js",
 			"position": 0,
 			"type": 0
 			},
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/slick.js",
 			"position": 1,
 			"type": 0
 			},
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/color-thief.js",
 			"position": 2,
 			"type": 0
 			},
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/jquery.mCustomScrollbar.concat.min.js",
 			"position": 3,
 			"type": 1
