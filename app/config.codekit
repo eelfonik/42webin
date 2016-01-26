@@ -527,7 +527,7 @@
 	"\/scripts\/color-thief.js": {
 		"fileType": 64,
 		"ignore": 1,
-		"ignoreWasSetByUser": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/scripts\/color-thief.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/color-thief-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -1547,14 +1547,8 @@
 			},
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/scripts\/color-thief.js",
-			"position": 2,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/jquery.mCustomScrollbar.concat.min.js",
-			"position": 3,
+			"position": 2,
 			"type": 1
 			}
 		],

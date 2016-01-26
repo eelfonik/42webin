@@ -196,7 +196,7 @@
     $header.toggleClass("clicked");
   });
 
-  var colorThief = new ColorThief();
+  // var colorThief = new ColorThief();
 
   function componentToHex(c) {
     var hex = c.toString(16);
@@ -219,23 +219,23 @@
   // function returnOpposite(colour) {
   //   return decimalToHex(255 - hexToDecimal(colour.substr(0,2))) + decimalToHex(255 - hexToDecimal(colour.substr(2,2))) + decimalToHex(255 -  hexToDecimal(colour.substr(4,2)));
   // }
-  function changeColor(img, name) {
-      var color = colorThief.getColor(img.find("img").first()[0]);//returns an array of rgb values
-      // console.log($pic.find("img")[0]);
-      var hexValue = rgbToHex(color[0], color[1], color[2]);
-      var luma = 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2];
-      $(".works-pic").css("background-color",hexValue);
-      name.css("color",hexValue);
-      name.siblings().css("color", "#000");
-      if (luma < 50) {
-          $(".projet-note").css("color","#ddd");
-          $(".under-line").addClass("light");
-      }
-      else {
-          $(".projet-note").css("color","#111");
-          $(".under-line").removeClass("light");
-      }
-  }
+  
+  // function changeColor(img, name) {
+  //     var color = colorThief.getColor(img.find("img").first()[0]);//returns an array of rgb values
+  //     var hexValue = rgbToHex(color[0], color[1], color[2]);
+  //     var luma = 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2];
+  //     $(".works-pic").css("background-color",hexValue);
+  //     name.css("color",hexValue);
+  //     name.siblings().css("color", "#000");
+  //     if (luma < 50) {
+  //         $(".projet-note").css("color","#ddd");
+  //         $(".under-line").addClass("light");
+  //     }
+  //     else {
+  //         $(".projet-note").css("color","#111");
+  //         $(".under-line").removeClass("light");
+  //     }
+  // }
 
   function fixColor(name){
     var fixer = name.attr("id");
