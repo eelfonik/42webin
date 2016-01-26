@@ -22,6 +22,215 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/cabane\/1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 836336,
+		"inputAbbreviatedPath": "\/cabane\/1.png",
+		"outputAbbreviatedPath": "\/cabane\/1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/cabane\/2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 582502,
+		"inputAbbreviatedPath": "\/cabane\/2.png",
+		"outputAbbreviatedPath": "\/cabane\/2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/cabane\/3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 408886,
+		"inputAbbreviatedPath": "\/cabane\/3.png",
+		"outputAbbreviatedPath": "\/cabane\/3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/cabane\/4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 315086,
+		"inputAbbreviatedPath": "\/cabane\/4.png",
+		"outputAbbreviatedPath": "\/cabane\/4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/cabane\/5.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 150219,
+		"inputAbbreviatedPath": "\/cabane\/5.png",
+		"outputAbbreviatedPath": "\/cabane\/5.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/chen\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 101719,
+		"inputAbbreviatedPath": "\/chen\/1.jpg",
+		"outputAbbreviatedPath": "\/chen\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/chen\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80647,
+		"inputAbbreviatedPath": "\/chen\/2.jpg",
+		"outputAbbreviatedPath": "\/chen\/2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/chen\/3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32486,
+		"inputAbbreviatedPath": "\/chen\/3.jpg",
+		"outputAbbreviatedPath": "\/chen\/3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/chen\/4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 82288,
+		"inputAbbreviatedPath": "\/chen\/4.jpg",
+		"outputAbbreviatedPath": "\/chen\/4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/chen\/5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 78507,
+		"inputAbbreviatedPath": "\/chen\/5.jpg",
+		"outputAbbreviatedPath": "\/chen\/5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/chen\/6.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 116238,
+		"inputAbbreviatedPath": "\/chen\/6.jpg",
+		"outputAbbreviatedPath": "\/chen\/6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/criloi\/1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 238452,
+		"inputAbbreviatedPath": "\/criloi\/1.png",
+		"outputAbbreviatedPath": "\/criloi\/1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/criloi\/2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 119125,
+		"inputAbbreviatedPath": "\/criloi\/2.png",
+		"outputAbbreviatedPath": "\/criloi\/2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/criloi\/3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 239563,
+		"inputAbbreviatedPath": "\/criloi\/3.png",
+		"outputAbbreviatedPath": "\/criloi\/3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/criloi\/4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 52532,
+		"inputAbbreviatedPath": "\/criloi\/4.png",
+		"outputAbbreviatedPath": "\/criloi\/4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/exprimerie\/1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9373,
+		"inputAbbreviatedPath": "\/exprimerie\/1.png",
+		"outputAbbreviatedPath": "\/exprimerie\/1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/exprimerie\/2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 64068,
+		"inputAbbreviatedPath": "\/exprimerie\/2.png",
+		"outputAbbreviatedPath": "\/exprimerie\/2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/exprimerie\/3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 182751,
+		"inputAbbreviatedPath": "\/exprimerie\/3.png",
+		"outputAbbreviatedPath": "\/exprimerie\/3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/exprimerie\/4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34277,
+		"inputAbbreviatedPath": "\/exprimerie\/4.png",
+		"outputAbbreviatedPath": "\/exprimerie\/4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/cabane1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -405,8 +614,8 @@
 		},
 	"\/scripts\/snap.svg-min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/scripts\/snap.svg-min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/snap.svg-min-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -427,8 +636,8 @@
 		},
 	"\/scripts\/velocity.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/scripts\/velocity.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/velocity.min-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -438,8 +647,8 @@
 		},
 	"\/scripts\/velocity.ui.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/scripts\/velocity.ui.min.js",
 		"outputAbbreviatedPath": "\/scripts\/min\/velocity.ui.min-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -1218,6 +1427,105 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/sysmo\/1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 427951,
+		"inputAbbreviatedPath": "\/sysmo\/1.png",
+		"outputAbbreviatedPath": "\/sysmo\/1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sysmo\/2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 314017,
+		"inputAbbreviatedPath": "\/sysmo\/2.png",
+		"outputAbbreviatedPath": "\/sysmo\/2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/sysmo\/3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 35713,
+		"inputAbbreviatedPath": "\/sysmo\/3.png",
+		"outputAbbreviatedPath": "\/sysmo\/3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/yz\/1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 611019,
+		"inputAbbreviatedPath": "\/yz\/1.png",
+		"outputAbbreviatedPath": "\/yz\/1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/yz\/2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 249327,
+		"inputAbbreviatedPath": "\/yz\/2.png",
+		"outputAbbreviatedPath": "\/yz\/2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/yz\/3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 157548,
+		"inputAbbreviatedPath": "\/yz\/3.png",
+		"outputAbbreviatedPath": "\/yz\/3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/yz\/4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 188787,
+		"inputAbbreviatedPath": "\/yz\/4.png",
+		"outputAbbreviatedPath": "\/yz\/4.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/yz\/5.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 237528,
+		"inputAbbreviatedPath": "\/yz\/5.png",
+		"outputAbbreviatedPath": "\/yz\/5.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/yz\/6.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 156966,
+		"inputAbbreviatedPath": "\/yz\/6.png",
+		"outputAbbreviatedPath": "\/yz\/6.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		}
 	},
 "hooks": [
@@ -1226,25 +1534,25 @@
 "manualImportLinks": {
 	"\/scripts\/main.js": [
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/jquery-1.11.1.min.js",
 			"position": 0,
 			"type": 0
 			},
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/slick.js",
 			"position": 1,
 			"type": 0
 			},
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/color-thief.js",
 			"position": 2,
 			"type": 0
 			},
 		{
-			"followForSyntaxChecking": 1,
+			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/scripts\/jquery.mCustomScrollbar.concat.min.js",
 			"position": 3,
 			"type": 1

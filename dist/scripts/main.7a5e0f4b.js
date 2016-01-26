@@ -40,10 +40,20 @@
         }
     }
 
+  var colors = {
+    sysmo : [175, 149, 135],
+    yz: [220, 213, 196],
+    chen : [229, 229, 229],
+    exprimerie: [154, 154, 154],
+    cabane : [97, 99, 85],
+    criloi : [211, 206, 202]
+  }
+
   $(window).on("load", function(){
     var $header = $("header");
     $(".pic-slide").slick({
       fade: true,
+      adaptiveHeight: true,
       lazyLoad: 'progressive',
       prevArrow: '<div data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"></div>', 
       nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>'
@@ -210,11 +220,29 @@
   //   return decimalToHex(255 - hexToDecimal(colour.substr(0,2))) + decimalToHex(255 - hexToDecimal(colour.substr(2,2))) + decimalToHex(255 -  hexToDecimal(colour.substr(4,2)));
   // }
   function changeColor(img, name) {
-      var color = colorThief.getColor(img.find(".slick-current")[0]);//returns an array of rgb values
+      var color = colorThief.getColor(img.find("img").first()[0]);//returns an array of rgb values
       // console.log($pic.find("img")[0]);
       var hexValue = rgbToHex(color[0], color[1], color[2]);
       var luma = 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2];
       $(".works-pic").css("background-color",hexValue);
+      name.css("color",hexValue);
+      name.siblings().css("color", "#000");
+      if (luma < 50) {
+          $(".projet-note").css("color","#ddd");
+          $(".under-line").addClass("light");
+      }
+      else {
+          $(".projet-note").css("color","#111");
+          $(".under-line").removeClass("light");
+      }
+  }
+
+  function fixColor(name){
+    var fixer = name.attr("id");
+    var color = colors[fixer];
+    var hexValue = rgbToHex(color[0], color[1], color[2]);
+    var luma = 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2];
+    $(".works-pic").css("background-color",hexValue);
       name.css("color",hexValue);
       name.siblings().css("color", "#000");
       if (luma < 50) {
@@ -233,8 +261,9 @@
       var $name = $(pointer);
       centerEl($pointer, $(".works-pic"));
       centerEl($name, $(".works-name"));
-      changeColor($pointer, $name);
-  })
+      // changeColor($pointer, $name);
+      fixColor($name);
+  });
 
   $(".work-name").click(function(){
       var $this= $(this);
@@ -242,8 +271,8 @@
       var $pic = $(pointer);
       centerEl($pic, $(".works-pic"));
       centerEl($this, $(".works-name"));
-      changeColor($pic, $this);
-
+      // changeColor($pic, $this);
+      fixColor($this);
       // $this.addClass('showSingle');
       // // $pic.addClass('showSingle');
       // setTimeout(function () { 
