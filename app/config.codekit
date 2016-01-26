@@ -77,68 +77,68 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/chen\/1.png": {
-		"fileType": 32768,
+	"\/chen\/1.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 674450,
-		"inputAbbreviatedPath": "\/chen\/1.png",
-		"outputAbbreviatedPath": "\/chen\/1.png",
+		"initialSize": 101719,
+		"inputAbbreviatedPath": "\/chen\/1.jpg",
+		"outputAbbreviatedPath": "\/chen\/1.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/chen\/2.png": {
-		"fileType": 32768,
+	"\/chen\/2.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 117841,
-		"inputAbbreviatedPath": "\/chen\/2.png",
-		"outputAbbreviatedPath": "\/chen\/2.png",
+		"initialSize": 80647,
+		"inputAbbreviatedPath": "\/chen\/2.jpg",
+		"outputAbbreviatedPath": "\/chen\/2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/chen\/3.png": {
-		"fileType": 32768,
+	"\/chen\/3.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 174529,
-		"inputAbbreviatedPath": "\/chen\/3.png",
-		"outputAbbreviatedPath": "\/chen\/3.png",
+		"initialSize": 32486,
+		"inputAbbreviatedPath": "\/chen\/3.jpg",
+		"outputAbbreviatedPath": "\/chen\/3.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/chen\/4.png": {
-		"fileType": 32768,
+	"\/chen\/4.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 493584,
-		"inputAbbreviatedPath": "\/chen\/4.png",
-		"outputAbbreviatedPath": "\/chen\/4.png",
+		"initialSize": 82288,
+		"inputAbbreviatedPath": "\/chen\/4.jpg",
+		"outputAbbreviatedPath": "\/chen\/4.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/chen\/5.png": {
-		"fileType": 32768,
+	"\/chen\/5.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 716980,
-		"inputAbbreviatedPath": "\/chen\/5.png",
-		"outputAbbreviatedPath": "\/chen\/5.png",
+		"initialSize": 78507,
+		"inputAbbreviatedPath": "\/chen\/5.jpg",
+		"outputAbbreviatedPath": "\/chen\/5.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/chen\/6.png": {
-		"fileType": 32768,
+	"\/chen\/6.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 826755,
-		"inputAbbreviatedPath": "\/chen\/6.png",
-		"outputAbbreviatedPath": "\/chen\/6.png",
+		"initialSize": 116238,
+		"inputAbbreviatedPath": "\/chen\/6.jpg",
+		"outputAbbreviatedPath": "\/chen\/6.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
