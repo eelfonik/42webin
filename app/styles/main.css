@@ -2917,6 +2917,10 @@ main {
     height: 100%;
     overflow: scroll; }
 
+  .works-pic {
+    -webkit-transition: background-color 400ms ease-in-out;
+    transition: background-color 400ms ease-in-out; }
+
   .work {
     position: relative;
     width: 80%;

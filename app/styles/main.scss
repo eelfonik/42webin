@@ -401,9 +401,9 @@ main {
   // position: relative;
 }
 
-// .works-pic {
-//   width: 60%;
-// }
+.works-pic {
+  transition: background-color 400ms ease-in-out;
+}
 // .works-name {
 //   width: 40%;
 // }
