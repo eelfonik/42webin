@@ -49,64 +49,7 @@
     criloi : [211, 206, 202]
   }
 
-  $(window).on("load", function(){
-    var $header = $("header");
-    $(".pic-slide").slick({
-      fade: true,
-      adaptiveHeight: true,
-      lazyLoad: 'progressive',
-      prevArrow: '<div data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"></div>', 
-      nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>',
-      responsive: [
-        {
-          breakpoint: 990,
-          settings: {
-            fade: false,
-            speed: 400,
-            // swipeToSlide: true,
-            touchMove: false,
-            cssEase: 'linear'
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-    $(".works-pic").mCustomScrollbar({
-      theme: "dark",
-      callbacks:{
-          whileScrolling:function(){
-            if (!$header.hasClass("clicked") && !$header.hasClass("down")) {
-              $header.addClass("down");
-              // $(".logo").addClass("fadeOutUp").removeClass("fadeInDown");
-              $(".info").removeClass("fadeInUp").addClass("fadeOutDown"); 
-            }
-            // if ($(".logo").hasClass("fadeInDown"))
-            // else {
-            //   $header.removeClass("clicked").delay(400)
-            //            .queue(function() {
-            //                $(this).addClass("down");
-            //                $(this).dequeue();
-            //            });
-            // }
-            // else {
-            //   $header.addClass("down");
-            // } 
-            // $(".logo").addClass("fadeOutUp").removeClass("fadeInDown");
-            // $(".info").removeClass("fadeInUp").addClass("fadeOutDown");                      
-          },
-          onTotalScrollBack:function(){
-            if (!$header.hasClass("clicked") && $header.hasClass("down")) {
-              $header.removeClass("down");
-              // $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
-              $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
-            } 
-          }
-      }
-    });
-
-    function centerEl(el, container) {
+  function centerEl(el, container) {
         // var elHeight = el.outerHeight(true);
         // var aboveHeight = 0;
         // el.prevAll().each(function(){
@@ -201,17 +144,7 @@
       //   });
       // });
 
-  $header.click(function(event){
-    if ($(event.target).is('a')) { return false; }
-    $header.removeClass("clicked");
-  });
-
-  $(".logo a").click(function(e){
-    e.preventDefault();
-    $header.toggleClass("clicked");
-  });
-
-  // var colorThief = new ColorThief();
+// var colorThief = new ColorThief();
 
   function componentToHex(c) {
     var hex = c.toString(16);
@@ -270,49 +203,101 @@
       }
   }
 
-  $(".slick-arrow").click(function(){
-      var $pointer = $(this).closest(".work");
-      var pointer = "#"+$pointer.attr("id").split('-')[0];
-      var $name = $(pointer);
-      centerEl($pointer, $(".works-pic"));
-      centerEl($name, $(".works-name"));
-      // changeColor($pointer, $name);
-      fixColor($name);
-  });
+  function wideWindowInit(){
+    var header = $("header");
+    $(".works-pic").mCustomScrollbar({
+      theme: "dark",
+      callbacks:{
+          whileScrolling:function(){
+            if (!header.hasClass("clicked") && !header.hasClass("down")) {
+              header.addClass("down");
+              // $(".logo").addClass("fadeOutUp").removeClass("fadeInDown");
+              $(".info").removeClass("fadeInUp").addClass("fadeOutDown"); 
+            }                  
+          },
+          onTotalScrollBack:function(){
+            if (!header.hasClass("clicked") && header.hasClass("down")) {
+              header.removeClass("down");
+              // $(".logo").removeClass("fadeOutUp").addClass("fadeInDown");
+              $(".info").removeClass("fadeOutDown").addClass("fadeInUp");
+            } 
+          }
+      }
+    });
+    $(document).on("click", ".slick-arrow", function(){
+        var $pointer = $(this).closest(".work");
+        var pointer = "#"+$pointer.attr("id").split('-')[0];
+        var $name = $(pointer);
+        console.log("arrow clicked!")
+        centerEl($pointer, $(".works-pic"));
+        centerEl($name, $(".works-name"));
+        // changeColor($pointer, $name);
+        fixColor($name);
+    });
+    $(document).on("click", ".work-name", function(){
+        var $this= $(this);
+        var pointer = "#"+$this.attr("id")+"-pic";
+        var $pic = $(pointer);
+        console.log("name clicked!");
+        centerEl($pic, $(".works-pic"));
+        centerEl($this, $(".works-name"));
+        // changeColor($pic, $this);
+        fixColor($this);
+    });
+  }
 
-  $(".work-name").click(function(){
-      var $this= $(this);
-      var pointer = "#"+$this.attr("id")+"-pic";
-      var $pic = $(pointer);
-      centerEl($pic, $(".works-pic"));
-      centerEl($this, $(".works-name"));
-      // changeColor($pic, $this);
-      fixColor($this);
-      // $this.addClass('showSingle');
-      // // $pic.addClass('showSingle');
-      // setTimeout(function () { 
-      //     $this.removeClass('showSingle');
-      //     // $pic.removeClass('showSingle');
-      // }, 800);
 
-      // var $container = $this.parent(".works");
-      // var $projet = $this.siblings(".projet");
-      // if(!$projet.hasClass("clicked")) {
-      //     $projet.addClass("clicked");
-      // }
-      // $container.siblings().find(".projet").removeClass("clicked");
-      // centerEl($projet);
-  });
-    
-  });//onload function
 
-  $(window).on("resize", function(){
+
+$(window).on("load", function(){
+    $(".pic-slide").slick({
+      fade: true,
+      adaptiveHeight: true,
+      lazyLoad: 'progressive',
+      prevArrow: '<div data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"></div>', 
+      nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>',
+      responsive: [
+        {
+          breakpoint: 990,
+          settings: {
+            fade: false,
+            speed: 400,
+            // swipeToSlide: true,
+            touchMove: false,
+            cssEase: 'linear'
+          }
+        }
+      ]
+    });
+    var $header = $("header");
+    $header.click(function(event){
+      if ($(event.target).is('a')) { return false; }
+      $header.removeClass("clicked");
+    });
+
+    $(".logo a").click(function(e){
+      e.preventDefault();
+      $header.toggleClass("clicked");
+    });
+
+    if ($(window).width() > 990){
+
+        wideWindowInit();
+    }
+});//window load function
+
+$(window).on("resize", function(){
     if ($(window).width()<=990) {
       $(".works-pic").css("background-color","transparent");
       $(".projet-note").css("color","#111");
       $(".under-line").removeClass("light");
     }
-  });
+    else {
+      wideWindowInit();
+  
+    } //else part, for desktop only 
+
+});//window resize function
 
 
   // var querySelector = document.querySelector.bind(document);
