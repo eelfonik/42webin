@@ -228,7 +228,6 @@
         var $pointer = $(this).closest(".work");
         var pointer = "#"+$pointer.attr("id").split('-')[0];
         var $name = $(pointer);
-        console.log("arrow clicked!")
         centerEl($pointer, $(".works-pic"));
         centerEl($name, $(".works-name"));
         // changeColor($pointer, $name);
@@ -238,7 +237,6 @@
         var $this= $(this);
         var pointer = "#"+$this.attr("id")+"-pic";
         var $pic = $(pointer);
-        console.log("name clicked!");
         centerEl($pic, $(".works-pic"));
         centerEl($this, $(".works-name"));
         // changeColor($pic, $this);
