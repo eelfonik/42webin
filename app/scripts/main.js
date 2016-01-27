@@ -56,7 +56,22 @@
       adaptiveHeight: true,
       lazyLoad: 'progressive',
       prevArrow: '<div data-role="none" class="slick-prev" aria-label="Previous" tabindex="0"></div>', 
-      nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>'
+      nextArrow: '<div data-role="none" class="slick-next" aria-label="Next" tabindex="0"></div>',
+      responsive: [
+        {
+          breakpoint: 990,
+          settings: {
+            fade: false,
+            speed: 400,
+            // swipeToSlide: true,
+            touchMove: false,
+            cssEase: 'linear'
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
     $(".works-pic").mCustomScrollbar({
       theme: "dark",
